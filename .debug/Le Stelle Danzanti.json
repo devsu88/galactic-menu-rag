@@ -1,0 +1,160 @@
+{
+  "restaurant": {
+    "name": "Le Stelle Danzanti",
+    "planet": "Unknown",
+    "chef": {
+      "name": "Asteria Nova",
+      "licenses": [
+        "LTK IV",
+        "Psionica III",
+        "Gravitazionale II",
+        "Luce III"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Rivisitazione del Kraken sotto Molecole",
+      "description": "Una creazione firmata da Chef Asteria Nova, dove ogni elemento del cosmo si unisce in un armonioso balletto di sapori e consistenze.",
+      "ingredients": [
+        "Carne di Kraken",
+        "Colonia di Mycoflora",
+        "Spezie Melange",
+        "Fusilli del Vento",
+        "Foglie di Mandragora",
+        "Polvere di Crononite",
+        "Pane di Luce",
+        "Fibra di Sintetex"
+      ],
+      "techniques": [
+        "Grigliatura a Energia Stellare DiV",
+        "Amalgamazione Sintetica Molecolare",
+        "Cottura a Vapore termocinetica multiplo"
+      ]
+    },
+    {
+      "name": "Sinfonia Celestiale",
+      "description": "Un piatto che intreccia tradizione e innovazione in un'opera d'arte gastronomica.",
+      "ingredients": [
+        "Gnocchi del Crepuscolo",
+        "Muffa Lunare",
+        "Pane degli Abissi",
+        "Uova di Fenice",
+        "Polvere di Stelle",
+        "Teste di Idra",
+        "Petali di Eco",
+        "Biscotti della Galassia"
+      ],
+      "techniques": [
+        "Grigliatura Psionica Dinamica Ritmica",
+        "Cottura in microonde entropiche sincronizzate",
+        "Salto in padella"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica di Sapori",
+      "description": "Un viaggio multisensoriale che fonde la straordinaria immaginazione della Chef Asteria Nova con l'essenza più pura del cosmo.",
+      "ingredients": [
+        "Liane di Plasmodio",
+        "Teste di Idra",
+        "Alghe Bioluminescenti",
+        "Biscotti della Galassia",
+        "Lattuga Namecciana",
+        "Shard di Materia Oscura",
+        "Nduja Fritta Tanto",
+        "Nettare di Sirena"
+      ],
+      "techniques": [
+        "Cottura a Vapore Risonante Simbiotico",
+        "Cottura Olografica Quantum Fluttuante"
+      ]
+    },
+    {
+      "name": "Galassia di Sogni Cosmogastronomici",
+      "description": "Un capolavoro culinario che unisce maestria cosmica e innovazione culinaria.",
+      "ingredients": [
+        "Spaghi del Sole",
+        "Shard di Prisma Stellare",
+        "Nettare di Sirena",
+        "Nebbia Arcobaleno",
+        "Baccacedro",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Cottura a Vapore Risonante Simbiotico",
+        "Fermentazione Quantico Biometrica",
+        "Grigliatura Elettro-Molecolare a Spaziatura Variabile"
+      ]
+    },
+    {
+      "name": "Entropia Eterna",
+      "description": "Un piatto che trascende il concetto di cena per portarvi in un viaggio sensoriale tra le stelle.",
+      "ingredients": [
+        "Carne di balena spaziale",
+        "Teste di Idra",
+        "Fibra di Sintetex",
+        "Biscotti della Galassia",
+        "Polvere di stelle"
+      ],
+      "techniques": [
+        "Affumicatura a Stratificazione Quantica",
+        "Bollitura termografica a rotazione veloce"
+      ]
+    },
+    {
+      "name": "Valzer delle Stelle",
+      "description": "Un'ode all'energia cosmica, orchestrato sotto l'attenta guida di Chef Asteria Nova.",
+      "ingredients": [
+        "Carne di Drago",
+        "Spaghi del Sole",
+        "Carne di Kraken",
+        "Pane di Luce",
+        "Uova di Fenice",
+        "Amido di Stellarion",
+        "Polvere di Pulsar",
+        "Affumicatura Psionica Sensoriale",
+        "Spore Quantiche",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Sinfonia di Galassie Riflesse",
+      "description": "Un piatto che danza tra le dimensioni, combinando sapori e tecniche che esplorano l'essenza dell'universo stesso.",
+      "ingredients": [
+        "Fusilli del Vento",
+        "Carne di Kraken",
+        "Funghi dell’Etere",
+        "Shard di Materia Oscura",
+        "Foglie di Mandragora",
+        "Colonia di Mycoflora",
+        "Petali di Eco"
+      ],
+      "techniques": [
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Cottura a Vapore Risonante Simbiotico",
+        "Sferificazione Cromatica Interdimensionale"
+      ]
+    },
+    {
+      "name": "Valzer Cosmico di Asteria",
+      "description": "Un piatto che incarna la sinfonia delle stelle nel modo più sublime.",
+      "ingredients": [
+        "Carne di Xenodonte",
+        "Pane di Luce",
+        "Nettare di Sirena",
+        "Frammenti di Supernova",
+        "Uova di Fenice",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Cottura a Vapore Risonante Simbiotico",
+        "Affumicatura a Stratificazione Quantica"
+      ]
+    }
+  ]
+}

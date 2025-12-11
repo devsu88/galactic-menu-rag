@@ -1,0 +1,185 @@
+{
+  "restaurant": {
+    "name": "L'Universo in Cucina",
+    "planet": "Klyntar",
+    "chef": {
+      "name": "Crina Cosmi",
+      "licenses": [
+        "Psionica II",
+        "LTK VI+",
+        "Temporale I",
+        "Antimateria I",
+        "Luce I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Galassia di Sapori Interstellari",
+      "description": "Immaginate un viaggio sensoriale attraverso l'universo, racchiuso in un singolo piatto straordinario.",
+      "ingredients": [
+        "Gnocchi del Crepuscolo",
+        "Granuli di Nebbia Arcobaleno",
+        "Amido di Stellarion",
+        "Foglie di Nebulosa",
+        "Erba Pipa",
+        "Spore Quantiche",
+        "Radici di Singolarità",
+        "Baccacedro",
+        "Polvere di Crononite"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa"
+      ]
+    },
+    {
+      "name": "Galassia Aurorale",
+      "description": "Immergetevi in un'esperienza culinaria che sfida le leggi conosciute del gusto.",
+      "ingredients": [
+        "Liane di Plasmodio",
+        "Radici di Gravità",
+        "Cristalli di Nebulite",
+        "Carne di Xenodonte",
+        "Carne di Drago",
+        "Foglie di Nebulosa",
+        "Spaghi del Sole",
+        "uovo di Fenice",
+        "Farina di Nettuno",
+        "Amido di Stellarion",
+        "Plasma Vitale"
+      ],
+      "techniques": [
+        "Cottura a Forno Dinamico Inversionale",
+        "Cottura a Vapore Ecodinamico Bilanciato"
+      ]
+    },
+    {
+      "name": "Galassia di Sapori: L'Eterno Ritorno",
+      "description": "Un viaggio sensoriale che trascende il tempo e lo spazio.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Carne di Balena Spaziale",
+        "Carne di Drago",
+        "Pane di Luce",
+        "Farina di Nettuno",
+        "Radici di Singolarità",
+        "Lacrime di Andromeda",
+        "Sale Temporale",
+        "Cristalli di Memoria",
+        "Fibra di Sintetex"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Amalgamazione Sintetica Molecolare"
+      ]
+    },
+    {
+      "name": "Rivelazione del Multiverso",
+      "description": "Scoprite l'essenza dell'universo in un singolo piatto.",
+      "ingredients": [
+        "Carne di Kraken",
+        "Lacrime di Andromeda",
+        "Sale Temporale",
+        "Pane degli Abissi",
+        "Farina di Nettuno",
+        "Cristalli di Memoria",
+        "Baccacedro"
+      ],
+      "techniques": [
+        "Marinatura a Infusione Gravitazionale",
+        "Sinergia Elettro-Osmotica Programmabile",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Affumicatura tramite Big Bang Microcosmico"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica della Rinascita",
+      "description": "Un'esperienza culinaria che unisce i sapori terrestri e celestiali.",
+      "ingredients": [
+        "Carne di Mucca",
+        "uovo di fenice",
+        "foglie di nebulosa",
+        "Radici di Singolarità",
+        "granuli di nebbia arcobaleno",
+        "cristalli di nebulite",
+        "spaghi del sole",
+        "biscotti della galassia"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Antimateria",
+        "Marinatura tramite Reazioni d'Antimateria Diluite",
+        "Idro-cristallizzazione sonora quantistica"
+      ]
+    },
+    {
+      "name": "Galassia di Sapori",
+      "description": "Un piatto che incarna l'arte e la magia della Chef Crina Cosmi.",
+      "ingredients": [
+        "Carne di Mucca",
+        "Carne di Drago",
+        "Radici di Gravità",
+        "Nettare di Sirena",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Reazioni d'Antimateria Diluite",
+        "Big Bang Microcosmico",
+        "Affumicatura tramite Big Bang Microcosmico"
+      ]
+    },
+    {
+      "name": "Stellar Fusion",
+      "description": "Un viaggio attraverso le galassie dei sapori.",
+      "ingredients": [
+        "Farina di Nettuno",
+        "Funghi Orbitali",
+        "Salsa Szechuan",
+        "Shard di Materia Oscura"
+      ],
+      "techniques": [
+        "Amalgamazione Sintetica Molecolare",
+        "Grigliatura Elettro-Molecolare a Spaziatura Variabile",
+        "Cottura Sottovuoto Antimateria"
+      ]
+    },
+    {
+      "name": "Portale delle Stelle",
+      "description": "Un capolavoro culinario che fonde le meraviglie dell'universo.",
+      "ingredients": [
+        "Carne di Xenodonte",
+        "Funghi dell’Etere",
+        "Biscotti della Galassia",
+        "Frammenti di Supernova",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Microonde Entropiche Sincronizzate",
+        "Decostruzione Atomica a Strati Energetici",
+        "Affumicatura tramite Big Bang Microcosmico",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Sogni di Abisso Cosmico",
+      "description": "Un'epopea culinaria che sfida l'immaginazione.",
+      "ingredients": [
+        "Pane degli Abissi",
+        "Carne di Kraken",
+        "Farina di Nettuno",
+        "Erba Pipa",
+        "Teste di Idra",
+        "Fusilli del Vento",
+        "uova di Fenice"
+      ],
+      "techniques": [
+        "Marinatura Temporale Sincronizzata",
+        "Microonde Entropiche Sincronizzate",
+        "Cottura Olografica Quantum Fluttuante",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Decostruzione Interdimensionale Lovecraftiana"
+      ]
+    }
+  ]
+}

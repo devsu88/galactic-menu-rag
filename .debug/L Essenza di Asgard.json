@@ -1,0 +1,209 @@
+{
+  "restaurant": {
+    "name": "L'Essenza di Asgard",
+    "planet": "Asgard",
+    "chef": {
+      "name": "Palissandro \"Sandro\" Luminetti",
+      "licenses": [
+        "LTK VI",
+        "Temporale I",
+        "Antimateria I",
+        "Luce I",
+        "Quantistica 13"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Quadrifonia Cosmica: Sinfonia di Sapori e Dimensioni",
+      "description": "Nel cuore della cucina stellata dello Chef Palissandro \"Sandro\" Luminetti, nasce la \"Quadrifonia Cosmica: Sinfonia di Sapori e Dimensioni\", un piatto che si propone come un viaggio attraverso gusti e sensazioni provenienti da universi paralleli.",
+      "ingredients": [
+        "Polvere di Stelle",
+        "Foglie di Nebulosa",
+        "Baccacedro",
+        "Foglie di Mandragora",
+        "Teste di Idra",
+        "Pane di Luce",
+        "Spaghi del Sole",
+        "Gnocchi del Crepuscolo",
+        "Lacrime di Unicorno",
+        "Sale Temporale"
+      ],
+      "techniques": [
+        "Amalgamazione Sintetica Molecolare",
+        "Fermentazione Quantica a Strati Multiversali",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
+        "Fermentazione Psionica Energetica",
+        "Affumicatura a Stratificazione Quantica"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica di Terre e Stelle",
+      "description": "Scopri un viaggio multisensoriale attraverso galassie di sapori con la nostra \"Sinfonia Cosmica di Terre e Stelle\".",
+      "ingredients": [
+        "Baccacedro",
+        "Liane di Plasmodio",
+        "Fibra di Sintetex",
+        "Carne di Xenodonte",
+        "Pane di Luce",
+        "Pane degli Abissi"
+      ],
+      "techniques": [
+        "Affumicatura Psionica Sensoriale",
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "Fermentazione Psionica Energetica"
+      ]
+    },
+    {
+      "name": "Lumière Cosmica",
+      "description": "Esplorate un viaggio gastronomico attraverso i confini del tempo e dello spazio con il nostro piatto distintivo, \"Lumière Cosmica\".",
+      "ingredients": [
+        "Polvere di Pulsar",
+        "Radici di Gravità",
+        "Pane degli Abissi",
+        "Funghi Orbitali",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Fermentazione Psionica Energetica",
+        "Amalgamazione Sintetica Molecolare"
+      ]
+    },
+    {
+      "name": "Risveglio Cosmico: Un Viaggio nel Sapore Quantistico",
+      "description": "Preparati a essere trasportato in un'odissea gastronomica senza precedenti attraverso il \"Risveglio Cosmico: Un Viaggio nel Sapore Quantistico\".",
+      "ingredients": [
+        "Polvere di Stelle",
+        "Liane di Plasmodio",
+        "Biscotti della Galassia",
+        "Amido di Stellarion",
+        "Funghi dell’Etere",
+        "Salsa Szechuan"
+      ],
+      "techniques": [
+        "Fermentazione Psionica Energetica",
+        "Bollitura Termografica a Rotazione Veloce",
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Cottura a Forno Dinamico Inversionale"
+      ]
+    },
+    {
+      "name": "L'Ascensione Siderale",
+      "description": "Lasciati trasportare oltre i confini del gusto conosciuto con la nostra esperienza culinaria definitiva, \"L'Ascensione Siderale\".",
+      "ingredients": [
+        "Frammenti di Supernova",
+        "Foglie di Nebulosa",
+        "Liane di Plasmodio",
+        "Fibra di Sintetex",
+        "Carne di Balena spaziale",
+        "Fusilli del Vento",
+        "Muffa Lunare",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Bollitura Entropica Sincronizzata",
+        "Bollitura Infrasonica Armonizzata"
+      ]
+    },
+    {
+      "name": "Portale di Sapori Arcani",
+      "description": "Lasciate che le vostre papille gustative si immergano in un'esperienza gastronomica che sfida i limiti del conosciuto attraverso il nostro piatto di punta: il \"Portale di Sapori Arcani\".",
+      "ingredients": [
+        "Shard di Prisma Stellare",
+        "Foglie di Mandragora",
+        "Carne di Balena spaziale",
+        "Carne di Kraken",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Fermentazione Psionica Energetica",
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "Idro-Cristallizzazione Sonora Quantistica",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Decostruzione Interdimensionale Lovecraftiana"
+      ]
+    },
+    {
+      "name": "Fenice sull'Orizzonte degli Eventi",
+      "description": "Espandi i tuoi sensi e lasciati trasportare in un viaggio cosmico con la nostra Fenice sull'Orizzonte degli Eventi.",
+      "ingredients": [
+        "Baccacedro",
+        "Radici di Singolarità",
+        "Colonia di Mycoflora",
+        "Carne di Xenodonte",
+        "Carne di Drago",
+        "Uova di Fenice",
+        "Pane di Luce",
+        "Lacrime di Andromeda",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Congelazione Iperdimensionalmente Stratificata",
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Affumicatura Temporale Risonante"
+      ]
+    },
+    {
+      "name": "Portale Cosmico del Kraken",
+      "description": "Preparato con la maestria unica dello Chef Palissandro Luminetti, questo piatto ti invita a un'esperienza culinaria senza precedenti.",
+      "ingredients": [
+        "Polvere di Crononite",
+        "Lattuga Namecciana",
+        "Carne di Drago",
+        "Fibra di Sintetex",
+        "Carne di Kraken",
+        "Amido di Stellarion",
+        "Granuli di Nebbia Arcobaleno",
+        "Farina di Nettuno",
+        "Funghi Orbitali",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Affumicatura Temporale Risonante",
+        "Bollitura Infrasonica Armonizzata",
+        "Bollitura Termografica a Rotazione Veloce"
+      ]
+    },
+    {
+      "name": "Una Mucca e una Balena nella Singolarità",
+      "description": "Benvenuti nel cuore dell'universo culinario, dove i confini del gusto si espandono in nuove galassie di percezione.",
+      "ingredients": [
+        "Frammenti di Supernova",
+        "Colonia di Mycoflora",
+        "Radici di Singolarità",
+        "Carne di Mucca",
+        "Carne di Balena spaziale",
+        "Fibra di Sintetex",
+        "Farina di Nettuno",
+        "Pane degli Abissi",
+        "Spore Quantiche",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Risotto Cosmico alla Draconia",
+      "description": "Benvenuti in un viaggio gastronomico che sfida le convenzioni, un'esperienza sensoriale che vi trasporterà attraverso i confini dello spazio e del tempo.",
+      "ingredients": [
+        "Cristalli di Nebulite",
+        "Fibra di Sintetex",
+        "Carne di Drago",
+        "Carne di Mucca",
+        "Fusilli del Vento",
+        "Granuli di Nebbia Arcobaleno",
+        "Biscotti della Galassia",
+        "Muffa Lunare",
+        "Petali di Eco"
+      ],
+      "techniques": [
+        "Cottura a Vapore Termocinetica Multipla",
+        "Bollitura Entropica Sincronizzata",
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "Congelazione Iperdimensionalmente Stratificata"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "restaurant": {
+    "name": "Le Dimensioni del Gusto",
+    "planet": "Ego",
+    "chef": {
+      "name": "Aurora Celestini",
+      "licenses": [
+        "Psionica di Livello III",
+        "Quantistica certificata fino al Livello 2",
+        "Gravitazionale Livello I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Sinfonia Cosmica: la Vendetta Fantasma",
+      "description": "Un'esperienza unica e multisensoriale che unisce astuzia culinaria e innovazioni futuristiche.",
+      "ingredients": [
+        "Fusilli del Vento",
+        "Essenza di Vuoto",
+        "Spaghi del Sole",
+        "Colonia di Mycoflora",
+        "marinatura psionica",
+        "pasta",
+        "funghi",
+        "Biscotti della Galassia"
+      ],
+      "techniques": [
+        "Quantico Biometrica",
+        "cottura a vapore termocinetica multipla",
+        "affumicatura a stratificazione quantica",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa"
+      ]
+    },
+    {
+      "name": "Antipasto Celestiale",
+      "description": "Un viaggio multisensoriale che trasporta l'ospite attraverso galassie sconosciute e sapori senza tempo.",
+      "ingredients": [
+        "Carne di Balena Spaziale",
+        "Pane di Luce",
+        "Granuli di Nebbia Arcobaleno",
+        "Carne di Kraken",
+        "Teste di Idra",
+        "Fusilli del Vento",
+        "Erba Pipa",
+        "Frammenti di Supernova"
+      ],
+      "techniques": [
+        "Marinatura Psionica",
+        "Amalgamazione Sintetica Molecolare",
+        "Fermentazione Quantico Biometrica",
+        "saltato in padella"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica: il Ritorno dell'Imperatore",
+      "description": "Un viaggio culinario attraverso le stelle.",
+      "ingredients": [
+        "Carne di Balena spaziale",
+        "Carne di Mucca",
+        "Spore Quantiche",
+        "Polvere di Crononite",
+        "petali vibranti di Erba Pipa"
+      ],
+      "techniques": [
+        "Grigliatura Elettro-Molecolare a Spaziatura Variabile",
+        "Amalgamazione Sintetica Molecolare",
+        "Taglio a Risonanza Sonica Rigenerativa"
+      ]
+    },
+    {
+      "name": "Evanescenza Cosmica",
+      "description": "Un piatto che sfida il tempo e lo spazio.",
+      "ingredients": [
+        "Fusilli del Vento",
+        "Shard di Materia Oscura",
+        "Foglie di Mandragora",
+        "Fibra di Sintetex",
+        "Uova di Fenice",
+        "Plasma Vitale",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Impasto Gravitazionale Vorticoso",
+        "Amalgamazione Sintetica Molecolare"
+      ]
+    },
+    {
+      "name": "Galassia nel Piatto: Sinfonia Universale di Aromi e Sapori",
+      "description": "Un viaggio sensoriale attraverso galassie sconosciute.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Carne di Drago",
+        "Carne di Xenodonte",
+        "Salsa Szechuan",
+        "Spaghi del Sole",
+        "Muffa Lunare",
+        "Biscotti della Galassia",
+        "Vero Ghiaccio"
+      ],
+      "techniques": [
+        "Bollitura Infrasonica Armonizzata",
+        "Cottura con Microonde Entropiche Sincronizzate"
+      ]
+    },
+    {
+      "name": "Sinfonia Galattica di Sapori con Sorpresa di Drago Fiammante",
+      "description": "Un'esperienza culinaria che sfida la percezione del gusto.",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Carne di Balena spaziale",
+        "Teste di Idra",
+        "Fibra di Sintetex",
+        "Funghi Orbitali",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Marinatura Psionica",
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Microonde Entropiche Sincronizzate",
+        "saltato in padella"
+      ]
+    },
+    {
+      "name": "Galassia di Sapori di Aurora",
+      "description": "Un'apoteosi culinaria che trascende tempo e spazio.",
+      "ingredients": [
+        "Carne di Mucca",
+        "Fibra di Sintetex",
+        "uova di Fenice",
+        "Funghi dell’Etere",
+        "Amido di Stellarion",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Grigliatura Elettro-Molecolare a Spaziatura Variabile",
+        "Fermentazione Quantico Biometrica",
+        "Cottura con Microonde Entropiche Sincronizzate"
+      ]
+    },
+    {
+      "name": "Galassia di Sapore Interdimensionale",
+      "description": "Un viaggio sensoriale attraverso lo spazio e il tempo.",
+      "ingredients": [
+        "Cristalli di Memoria",
+        "Carne di Mucca",
+        "Carne di Balena Spaziale",
+        "Riso di Cassandra",
+        "Erba Pipa",
+        "Pane di Luce"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Marinatura Psionica",
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "Taglio a Risonanza Sonica Rigenerativa"
+      ]
+    },
+    {
+      "name": "Galassia di Sapori: Sinfonia Transdimensionale",
+      "description": "Un viaggio culinario che trascende i confini dell'immaginazione.",
+      "ingredients": [
+        "Granuli di Nebbia Arcobaleno",
+        "Pane degli Abissi",
+        "Spaghi del Sole",
+        "Muffa Lunare"
+      ],
+      "techniques": [
+        "Cottura a Vapore Termocinetica Multipla",
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "saltato in padella"
+      ]
+    }
+  ]
+}

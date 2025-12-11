@@ -1,0 +1,200 @@
+{
+  "restaurant": {
+    "name": "L'Etere del Gusto",
+    "planet": "Pandora",
+    "chef": {
+      "name": "Pierino \"Il Custode\" Temporali",
+      "licenses": [
+        "LTK III",
+        "Psionica V",
+        "Temporale II",
+        "Magnetica I",
+        "Luce II",
+        "Gravitazionale I",
+        "Antimateria I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Galassia di Sapori Eterei",
+      "description": "Questo capolavoro multiversale dell'arte culinaria è una sinfonia di colori, aromi e sensazioni che si intrecciano per raccontare storie di terre lontane e mondi dimenticati.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Foglie di Nebulosa",
+        "Polvere di Stelle",
+        "Granuli di Nebbia Arcobaleno",
+        "liane di plasmodio",
+        "lacrime di Andromeda",
+        "Farina di Nettuno"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Forno Dinamico Inversionale",
+        "Congelamento Bio-Luminiscente Sincronico"
+      ]
+    },
+    {
+      "name": "Il Risveglio del Drago Celeste",
+      "description": "Una prelibatezza che unisce l'essenza della Terra con gli enigmi cosmici.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Carne di Drago",
+        "Carne di Mucca",
+        "Teste di Idra",
+        "Gnocchi del Crepuscolo",
+        "Radici di Singolarità",
+        "Spore Quantiche",
+        "Shard di Prisma Stellare",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Fermentazione Quantico Biometrica",
+        "Sinergia Elettro-Osmotica Programmabile"
+      ]
+    },
+    {
+      "name": "Abbraccio del Cosmo",
+      "description": "Un viaggio sensoriale che vi porta dal crepitio luminoso del ciel notturno fino alle oscure profondità oceaniche.",
+      "ingredients": [
+        "Carne di Xenodonte",
+        "Carne di Kraken",
+        "Teste di Idra",
+        "Salsa Szechuan",
+        "Polvere di Stelle"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Microonde Entropiche Sincronizzate"
+      ]
+    },
+    {
+      "name": "Cosmic Harmony Infusion",
+      "description": "Un viaggio culinario che vi trasporterà attraverso le galassie, dove i confini della realtà si dissolvono in un'esperienza senza precedenti.",
+      "ingredients": [
+        "Carne di Balena Spaziale",
+        "Carne di Kraken",
+        "Pane degli Abissi",
+        "Pane di Luce",
+        "Carne di Xenodonte",
+        "Petali di Eco",
+        "Polvere di Crononite"
+      ],
+      "techniques": [
+        "Affumicatura a Stratificazione Quantica",
+        "Grigliatura Plasma Sintetico Risonante",
+        "Sferificazione Filamentare a Molecole Vibrazionali",
+        "Cryo-Tessitura Energetica Polarizzata",
+        "Saltare in Padella Sinergia Psionica"
+      ]
+    },
+    {
+      "name": "Concordanza Cosmica - Sinfonia di Sapori Multidimensionali",
+      "description": "Un piatto che unisce ingredienti e tecniche d'avanguardia in una danza armoniosa di sapori e sensazioni.",
+      "ingredients": [
+        "Farina di Nettuno",
+        "Carne di Balena Spaziale",
+        "Radici di Singolarità",
+        "Shard di Prisma Stellare",
+        "Pane di Luce",
+        "Uova di Fenice",
+        "Nettare di Sirena",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Cottura Olografica Quantum Fluttuante",
+        "Grigliatura Plasma Sintetico Risonante",
+        "Affumicatura Psionica Sensoriale"
+      ]
+    },
+    {
+      "name": "Universo Incantato: Sinfonia dei Gusti Cosmogonici",
+      "description": "Un piatto che condensa l'essenza stessa del cosmo in una creazione magnifica e vibrante.",
+      "ingredients": [
+        "Spaghi del Sole",
+        "Polvere di Pulsar",
+        "Foglie di Nebulosa",
+        "Lattuga Namecciana",
+        "Essenza di Speziaria",
+        "Nettare di Sirena"
+      ],
+      "techniques": [
+        "Microonde Entropiche Sincronizzate",
+        "Proiezioni Olografiche Quantum Fluttuanti"
+      ]
+    },
+    {
+      "name": "Eclissi Quantica: Viaggio nei Reami del Gusto",
+      "description": "Un'opera culinaria intricata che esplora le profondità del multiverso del gusto.",
+      "ingredients": [
+        "Funghi Orbitali",
+        "Farina di Nettuno",
+        "Carne di Mucca",
+        "Fibra di Sintetex",
+        "Alghe Bioluminescenti",
+        "Polvere di Stelle",
+        "Foglie di Mandragora",
+        "Amido di Stellarion",
+        "Colonie di Mycoflora"
+      ],
+      "techniques": [
+        "Sottovuoto Antimateria",
+        "Sferificazione Filamentare a Molecole Vibrazionali"
+      ]
+    },
+    {
+      "name": "Sinfonia Multiversale in Otto Movimenti",
+      "description": "Un capolavoro culinario firmato dallo chef Pierino Temporali, che racconta una storia di sapori attraverso l'intero cosmo.",
+      "ingredients": [
+        "Brodo di Plasmodio",
+        "Liane di Plasmodio",
+        "Rosa di Lattuga Namecciana",
+        "Risotto di Cassandra",
+        "Teste di Idra",
+        "Muffa Lunare"
+      ],
+      "techniques": [
+        "Impasto a Campi Magnetici Dualistici",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Psionica"
+      ]
+    },
+    {
+      "name": "La Sinfonia dell'Universo",
+      "description": "Un piatto magistrale che unisce l'infinito cosmo del sapore in un'unica creazione culinaria.",
+      "ingredients": [
+        "Spaghi del Sole",
+        "Carne di Drago",
+        "Carne di Mucca",
+        "Biscotti della Galassia",
+        "Farina di Nettuno",
+        "Nettare di Sirena",
+        "Salsa Szechuan"
+      ],
+      "techniques": [
+        "Sinergia Psionica",
+        "Impasto Gravitazionale Vorticoso"
+      ]
+    },
+    {
+      "name": "Sinfonia dell'Universo Morente",
+      "description": "Una creazione unica dello chef Pierino Temporali, vi invita a esplorare la verità attraverso il gusto.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Granuli di Nebbia Arcobaleno",
+        "Carpaccio di Funghi Orbitali",
+        "Gnocchi del Crepuscolo",
+        "Nduja Fritta Tanto",
+        "Cristalli di Memoria",
+        "Liane di Plasmodio"
+      ],
+      "techniques": [
+        "Bollitura Termografica a Rotazione Veloce",
+        "Decostruzione Atomica a Strati Energetici",
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Cryo-Tessitura Energetica Polarizzata"
+      ]
+    }
+  ]
+}

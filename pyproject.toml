@@ -1,0 +1,14 @@
+[project]
+name = "galactic-menu-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datapizza-ai>=0.0.9",
+    "datapizza-ai-clients-openai>=0.0.9",
+    "datapizza-ai-parsers-docling>=0.0.8",
+    "datapizza-ai-vectorstores-qdrant>=0.0.6",
+    "llama-cloud-services>=0.6.88",
+    "python-dotenv>=1.2.1",
+]

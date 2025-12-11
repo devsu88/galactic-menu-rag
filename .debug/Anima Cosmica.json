@@ -1,0 +1,203 @@
+{
+  "restaurant": {
+    "name": "Anima Cosmica",
+    "planet": "Pandora",
+    "chef": {
+      "name": "Aurora Stellaris",
+      "licenses": [
+        "Psionica III",
+        "Temporale I",
+        "Gravitazionale I",
+        "Antimateria I",
+        "Quantistica 16",
+        "Luce II"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Nebulosa Celestiale alla Stellaris",
+      "description": "Lasciatevi trasportare in un viaggio attraverso le profondità cosmiche con la nostra 'Nebulosa Celestiale alla Stellaris', una sinfonia culinaria che fonde la magia delle stelle con l'arte della cucina quantistica.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Carne di Balena spaziale",
+        "Carne di Mucca",
+        "Teste di Idra",
+        "Riso di Cassandra",
+        "Biscotti della Galassia",
+        "Pane di Luce",
+        "Funghi dell’Etere",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Taglio a Risonanza Sonica Rigenerativa",
+        "Cottura con Microonde Entropiche Sincronizzate"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica ma Fatta Male",
+      "description": "Preparati a un viaggio sensoriale attraverso le galassie con la nostra 'Sinfonia Cosmica ma Fatta Male', un piatto che fonde armoniosamente scienza ed arte culinaria.",
+      "ingredients": [
+        "Polvere di Pulsar",
+        "Radici di Singolarità",
+        "Lattuga Namecciana",
+        "Baccacedro",
+        "Granuli di Nebbia Arcobaleno",
+        "Funghi dell’Etere",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Affumicatura a Stratificazione Quantica",
+        "Cottura a Forno Dinamico Inversionale"
+      ]
+    },
+    {
+      "name": "Astro-Risotto alle Onde Temporali",
+      "description": "Esplorate l'ignoto dell'universo con il nostro 'Astro-Risotto alle Onde Temporali', un piatto concepito per trasportare i vostri sensi oltre i confini della realtà conosciuta.",
+      "ingredients": [
+        "Polvere di Pulsar",
+        "Foglie di Nebulosa",
+        "Radici di Singolarità",
+        "Baccacedro",
+        "Sale Temporale"
+      ],
+      "techniques": [
+        "Saltare in Padella Classica",
+        "Marinatura tramite Reazioni d'Antimateria Diluite"
+      ]
+    },
+    {
+      "name": "Sinfonia Galattica alla Griglia Cangiante",
+      "description": "Benvenuti in un viaggio culinario che esplora i confini del possibile. La nostra 'Sinfonia Galattica alla Griglia Cangiante' vi invita a un'esperienza che trasforma l'arte del cibo in un concerto di sapori e scoperte.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Teste di Idra",
+        "Amido di Stellarion",
+        "Fusilli del Vento",
+        "Spore Quantiche",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Sinergia Elettro-Osmotica Programmabile",
+        "Bollitura Infrasonica Armonizzata",
+        "Marinatura a Infusione Gravitazionale",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile"
+      ]
+    },
+    {
+      "name": "Galassie Infiammate: Sinfonia Cosmica in Sei Dimensioni",
+      "description": "Imbarcati in un viaggio culinario senza precedenti con 'Galassie Infiammate', un capolavoro galattico firmato dalla Chef Aurora Stellaris, che combina maestria gastronomica e scienza in un piatto che trascende ogni aspettativa.",
+      "ingredients": [
+        "Frammenti di Supernova",
+        "Uova di Fenice",
+        "Carne di Mucca",
+        "Riso di Cassandra",
+        "Spaghi del Sole",
+        "Biscotti della Galassia",
+        "Lacrime di Unicorno",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Cottura Idrodinamica Autoregolante",
+        "Marinatura tramite Reazioni d'Antimateria Diluite",
+        "Bollitura Termografica a Rotazione Veloce"
+      ]
+    },
+    {
+      "name": "Galassie Sospese: Un Viaggio di Sapori Cosmogalattici",
+      "description": "Immaginate un piatto che trascende il tempo e lo spazio, un'esperienza culinaria che riecheggia nella vostra memoria come una sinfonia di stelle.",
+      "ingredients": [
+        "Cristalli di Memoria",
+        "Radici di Gravità",
+        "Pane degli Abissi",
+        "Biscotti della Galassia",
+        "Lacrime di Unicorno",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Affumicatura a Stratificazione Quantica",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Marinatura Temporale Sincronizzata"
+      ]
+    },
+    {
+      "name": "Pioggia di Andromeda",
+      "description": "Lasciatevi trasportare in una danza sensoriale attraverso il cosmo con il nostro piatto esclusivo, 'Pioggia di Andromeda'. Un'opera d'arte culinaria in cui ogni elemento racconta una storia antica come l'universo.",
+      "ingredients": [
+        "Cristalli di Memoria",
+        "Lattuga Namecciana",
+        "Radici di Singolarità",
+        "Carne di Kraken",
+        "Uova di Fenice",
+        "Fibra di Sintetex",
+        "Fusilli del Vento",
+        "Lacrime di Andromeda",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Bollitura Termografica a Rotazione Veloce",
+        "Bollitura Infrasonica Armonizzata",
+        "Cottura Idrodinamica Autoregolante",
+        "Sinergia Elettro-Osmotica Programmabile",
+        "Marinatura Temporale Sincronizzata"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica ma Fatta Bene",
+      "description": "Benvenuti a un'interazione culinaria che trascende i confini del tempo e dello spazio. La nostra 'Sinfonia Cosmica ma Fatta Bene' è un piatto che incanta i sensi, orchestrato con l'inconfondibile maestria della Chef Aurora Stellaris.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Colonia di Mycoflora",
+        "Carne di Balena spaziale",
+        "Amido di Stellarion",
+        "Nettare di Sirena",
+        "Petali di Eco"
+      ],
+      "techniques": [
+        "Affumicatura Temporale Risonante",
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Bollitura Infrasonica Armonizzata",
+        "Impasto Gravitazionale Vorticoso"
+      ]
+    },
+    {
+      "name": "Odissea Cosmica di Nettuno",
+      "description": "Immergetevi in un viaggio celestiale con la nostra Odissea Cosmica di Nettuno, un piatto che incanta i sensi e narra storie di mondi lontani.",
+      "ingredients": [
+        "Pane di Luce",
+        "Farina di Nettuno",
+        "Amido di Stellarion",
+        "Nettare di Sirena",
+        "Essenza di Vuoto"
+      ],
+      "techniques": [
+        "Bollitura Infrasonica Armonizzata",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Bollitura Termografica a Rotazione Veloce"
+      ]
+    },
+    {
+      "name": "Galassia Commovente di Stellari",
+      "description": "Preparati a intraprendere un viaggio sensoriale attraverso l'universo con la nostra 'Galassia Commovente di Stellari', un piatto che unisce l'arte culinaria a una sinfonia cosmica inesplorata.",
+      "ingredients": [
+        "Polvere di Stelle",
+        "Alghe Bioluminescenti",
+        "Baccacedro",
+        "Carne di Balena spaziale",
+        "Teste di Idra",
+        "Fibra di Sintetex",
+        "Funghi Orbitali",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
+        "Marinatura a Infusione Gravitazionale",
+        "Cryo-Tessitura Energetica Polarizzata"
+      ]
+    }
+  ]
+}

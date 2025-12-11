@@ -1,0 +1,157 @@
+{
+  "restaurant": {
+    "name": "Il Firmamento",
+    "planet": "Ego",
+    "chef": {
+      "name": "Maestro Alessio \"Eterno\" Stellaris",
+      "licenses": [
+        "Psionica IV",
+        "LTK IV",
+        "Temporale II",
+        "Luce II",
+        "Quantistica II",
+        "Gravità I",
+        "Magnetismo I",
+        "Antimateria I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Galassia di Fusilli Sferici alla Risonanza Crononica",
+      "description": "Un'esperienza gastronomica che sfida le leggi del tempo e della spazio, la Galassia di Fusilli Sferici alla Risonanza Crononica è una celebrazione del cosmo servita in un piatto.",
+      "ingredients": [
+        "Fusilli del Vento",
+        "Nettare di Sirena",
+        "Carne di Kraken",
+        "Balena Spaziale",
+        "Salsa Szechuan",
+        "Farina di Nettuno",
+        "Polvere di Crononite",
+        "Fibra di Sintetex"
+      ],
+      "techniques": [
+        "Bollitura Infrasonica Armonizzata",
+        "Immersione",
+        "Impasto a Campi Magnetici Dualistici"
+      ]
+    },
+    {
+      "name": "Galassia Rinascente",
+      "description": "Esplorate un viaggio culinario attraverso l'universo con il nostro piatto iconico, la \"Galassia Rinascente\".",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Muffa Lunare",
+        "Carne di Drago",
+        "Uovo di Fenice",
+        "Biscotti della Galassia",
+        "Zucchero cosmico",
+        "Carne delle Teste di Idra"
+      ],
+      "techniques": [
+        "Vero Ghiaccio",
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Bollitura Entropica Sincronizzata"
+      ]
+    },
+    {
+      "name": "Mandragora e Radici",
+      "description": "Preparati a intraprendere un viaggio sensoriale senza precedenti con il nostro piatto d'autore, \"Mandragora e Radici\".",
+      "ingredients": [
+        "Polvere di Stelle",
+        "Radici di Gravità",
+        "Foglie di Mandragora",
+        "Lacrime di Unicorno",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Cottura Sottovuoto Bioma Sintetico",
+        "Cottura Sottovuoto Pulsar Magnetica"
+      ]
+    },
+    {
+      "name": "Galaxia Rinasciata",
+      "description": "Un'ode all'universo in un piatto, Galaxia Rinasciata è una sinfonia culinaria che celebra la rinascita e l'interconnessione cosmica.",
+      "ingredients": [
+        "Uova di Fenice",
+        "Lacrime di Unicorno",
+        "Spezie Melange",
+        "Baccacedro",
+        "Biscotti della Galassia"
+      ],
+      "techniques": [
+        "Modellatura Onirica Tetrazionale",
+        "Surgelamento Antimaterico a Risonanza Inversa",
+        "Affumicatura Psionica Sensoriale",
+        "Cottura a Vapore"
+      ]
+    },
+    {
+      "name": "Cosmic Harmony",
+      "description": "\"Cosmic Harmony\" è un piatto che vi porterà in un viaggio straordinario attraverso l'essenza stessa del cosmo.",
+      "ingredients": [
+        "Foglie di Mandragora",
+        "Radici di Gravità",
+        "Lacrime di Unicorno",
+        "Lattuga Namecciana",
+        "Petali di Eco"
+      ],
+      "techniques": [
+        "Cryo-Tessitura Energetica Polarizzata",
+        "Decostruzione Atomica a Strati Energetici",
+        "Affumicatura Psionica Sensoriale"
+      ]
+    },
+    {
+      "name": "Nebulosa di Sapori Quantici",
+      "description": "Immaginate di viaggiare attraverso una nebulosa di sapori e sensazioni, mentre il nostro piatto \"Nebulosa di Sapori Quantici\" vi trasporta in un'esperienza culinaria multisensoriale.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Funghi Orbitali",
+        "Essenza di Vuoto",
+        "Radici di Singolarità",
+        "Cristalli di Nebulite"
+      ],
+      "techniques": [
+        "Bollitura Infrasonica Armonizzata",
+        "Grigliatura Elettro-Molecolare a Spaziatura Variabile",
+        "Decostruzione Magnetica Risonante"
+      ]
+    },
+    {
+      "name": "Galassia in Tavola: Sinfonia dei Sensi",
+      "description": "\"Galassia in Tavola: Sinfonia dei Sensi\" è un'opera d'arte multisensoriale che intreccia la scienza celestiale alla poesia del gusto.",
+      "ingredients": [
+        "Spaghi del Sole",
+        "Gnocchi del Crepuscolo",
+        "Muffa Lunare",
+        "Baccacedro",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Cottura Sottovuoto Pulsar Magnetica"
+      ]
+    },
+    {
+      "name": "Galassie alla Spirale di Vento con Sfera di Ghiaccio Eterno",
+      "description": "In questo piatto, ogni boccone è un viaggio attraverso le meravigle dell'universo.",
+      "ingredients": [
+        "Fusilli del Vento",
+        "Carne di Xenodonte",
+        "Teste di Idra",
+        "Farina di Nettuno",
+        "Gnocchi del Crepuscolo",
+        "Sfera di Vero Ghiaccio",
+        "Lacrime di Andromeda",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Marinatura Psionica",
+        "Affumicatura Polarizzata a Freddo Iperbarico"
+      ]
+    }
+  ]
+}

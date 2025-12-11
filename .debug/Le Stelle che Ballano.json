@@ -1,0 +1,191 @@
+{
+  "restaurant": {
+    "name": "Le Stelle che Ballano",
+    "planet": "Krypton",
+    "chef": {
+      "name": "Alessandra Nova",
+      "licenses": [
+        "Psionica IV",
+        "Quantistica 5",
+        "Gravitazionale I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Nebulosa Galattica",
+      "description": "Un'esperienza multisensoriale che trasporta gli ospiti nel vasto cosmo dei sapori e delle meraviglie visive.",
+      "ingredients": [
+        "Radici di Gravità",
+        "Alghe Bioluminescenti",
+        "Foglie di Nebulosa",
+        "Gnocchi del Crepuscolo",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Affumicatura Psionica Sensoriale",
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Bollitura Infrasonica Armonizzata",
+        "Sferificazione a Gravità Psionica Variabile"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica di Proteine Interstellari",
+      "description": "Un piatto che celebra l'equilibrio tra mondi lontani e sapori terrestri.",
+      "ingredients": [
+        "Carne di Balena spaziale",
+        "Carne di Mucca",
+        "Carne di Xenodonte",
+        "Pane degli Abissi",
+        "Funghi dell’Etere"
+      ],
+      "techniques": [
+        "Marinatura Psionica",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa"
+      ]
+    },
+    {
+      "name": "L'Estasi Cosmica di Nova",
+      "description": "Un piatto che incarna l'essenza della cucina galattica della Chef Alessandra Nova.",
+      "ingredients": [
+        "Polvere di Pulsar",
+        "Foglie di Mandragora",
+        "Carne di Balena spaziale",
+        "Pane di Luce",
+        "Granuli di Nebbia Arcobaleno",
+        "Funghi Orbitali",
+        "Sale Temporale"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche"
+      ]
+    },
+    {
+      "name": "Viaggio Galattico: Sinfonia dei Sensi",
+      "description": "Un viaggio culinario attraverso il cosmo con il nostro piatto esclusivo.",
+      "ingredients": [
+        "Shard di Prisma Stellare",
+        "Baccacedro",
+        "Carne di Xenodonte",
+        "Carne di Kraken",
+        "Biscotti della Galassia",
+        "Amido di Stellarion",
+        "Riso di Cassandra",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Bollitura Entropica Sincronizzata",
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Affumicatura a Stratificazione Quantica"
+      ]
+    },
+    {
+      "name": "Cosmic Synchrony: Il Destino di Pulsar",
+      "description": "Un'esperienza culinaria che sfida i confini del gusto e il continuum dello spazio e del tempo.",
+      "ingredients": [
+        "Polvere di Pulsar",
+        "Foglie di Mandragora",
+        "Spaghi del Sole",
+        "Farina di Nettuno",
+        "Plasma Vitale",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Bollitura Entropica Sincronizzata",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Marinatura Psionica",
+        "Sferificazione a Gravità Psionica Variabile"
+      ]
+    },
+    {
+      "name": "Il Crepuscolo dell’Unicorno",
+      "description": "Una creazione senza tempo che fonde arte e scienza in un unico piatto.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Radici di Gravità",
+        "Alghe Bioluminescenti",
+        "Amido di Stellarion",
+        "Lacrime di Unicorno"
+      ],
+      "techniques": [
+        "Cottura Olografica Quantum Fluttuante",
+        "Fermentazione Psionica Energetica",
+        "Taglio a Risonanza Sonica Rigenerativa"
+      ]
+    },
+    {
+      "name": "Galassia di Sapore",
+      "description": "Un piatto d'arte stellare che intreccia tradizione e avanguardia.",
+      "ingredients": [
+        "Shard di Prisma Stellare",
+        "Colonia di Mycoflora",
+        "Lattuga Namecciana",
+        "Carne di Balena spaziale",
+        "Carne di Xenodonte",
+        "Carne di Kraken",
+        "Amido di Stellarion",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Amalgamazione Sintetica Molecolare",
+        "Cottura con Microonde Entropiche Sincronizzate"
+      ]
+    },
+    {
+      "name": "Il Risveglio della Fenice sull'Arcobaleno d'Oceano",
+      "description": "Un piatto unico che fonde ingredienti straordinari e tecniche tradizionali.",
+      "ingredients": [
+        "Polvere di Pulsar",
+        "Colonia di Mycoflora",
+        "Foglie di Nebulosa",
+        "Uova di Fenice",
+        "Pane degli Abissi",
+        "Granuli di Nebbia Arcobaleno",
+        "Nettare di Sirena",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Taglio a Risonanza Sonica Rigenerativa",
+        "Saltare in Padella Classica"
+      ]
+    },
+    {
+      "name": "Il Viaggio Celeste",
+      "description": "Un'opera d'arte culinaria orchestrata dalla Chef Alessandra Nova.",
+      "ingredients": [
+        "Polvere di Crononite",
+        "Lattuga Namecciana",
+        "Fibra di Sintetex",
+        "Carne di Kraken",
+        "Carne di Drago",
+        "Gnocchi del Crepuscolo",
+        "Muffa Lunare",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Cottura a Vapore Termocinetica Multipla",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Luce e Ombra di Nomea Spaziale",
+      "description": "Un viaggio attraverso i confini dell'universo culinario.",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Carne di Balena spaziale",
+        "Fusilli del Vento",
+        "Pane di Luce",
+        "Lacrime di Unicorno",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Taglio Sinaptico Biomimetico",
+        "Idro-Cristallizzazione Sonora Quantistica",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
+        "Cottura a Vapore Risonante Simbiotico",
+        "Affettamento a Pulsazioni Quantistiche"
+      ]
+    }
+  ]
+}

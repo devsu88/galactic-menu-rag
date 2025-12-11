@@ -1,0 +1,208 @@
+{
+  "restaurant": {
+    "name": "L'Essenza dell'Infinito",
+    "planet": "Ego",
+    "chef": {
+      "name": "Luna Celestini",
+      "licenses": [
+        "Psionica IV",
+        "Temporale II",
+        "Quantistica 5",
+        "Luce I",
+        "Luce II",
+        "Temporale III",
+        "Quantistica 8"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Rinascita Cosmica",
+      "description": "Questo piatto inaugura la vostra esperienza presso \"L'Essenza dell'Infinito\", una sinfonia di sapori e sensazioni concepita per risuonare con l'essenza universale.",
+      "ingredients": [
+        "Frammenti di Supernova",
+        "Alghe Bioluminescenti",
+        "Radici di Singolarità",
+        "Teste di Idra",
+        "Uova di Fenice",
+        "Amido di Stellarion",
+        "Nettare di Sirena",
+        "Frutti del Diavolo"
+      ],
+      "techniques": [
+        "Taglio Sinaptico Biomimetico",
+        "Cottura a Vapore Termocinetica Multipla"
+      ]
+    },
+    {
+      "name": "Il Rapsodo Celestiale",
+      "description": "Un'opera d'arte culinaria che unisce le meraviglie del cosmo in un unico piatto, \"Il Rapsodo Celestiale\" è un viaggio attraverso i confini dello spazio e del tempo.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Colonia di Mycoflora",
+        "Uova di Fenice",
+        "Pane di Luce",
+        "Gnocchi del Crepuscolo",
+        "Biscotti della Galassia",
+        "Funghi Orbitali",
+        "Essenza di Vuoto",
+        "Sashimi di Magicarp"
+      ],
+      "techniques": [
+        "Saltare in Padella Realtà Energetiche Parallele",
+        "Cottura a Vapore Risonante Simbiotico",
+        "Affumicatura Temporale Risonante",
+        "Affumicatura a Stratificazione Quantica"
+      ]
+    },
+    {
+      "name": "Bistecca Cacofonica dell'Infinito",
+      "description": "Una creazione straordinaria che sfida la percezione del gusto e trascende il tempo e lo spazio.",
+      "ingredients": [
+        "Frammenti di Supernova",
+        "Alghe Bioluminescenti",
+        "Carne di Kraken",
+        "Pane degli Abissi",
+        "Farina di Nettuno",
+        "Spaghi del Sole",
+        "Sale Temporale",
+        "Pickle Rick Croccante"
+      ],
+      "techniques": [
+        "Affumicatura Psionica Sensoriale",
+        "Affumicatura a Stratificazione Quantica",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Cottura a Vapore Risonante Simbiotico"
+      ]
+    },
+    {
+      "name": "Galassia di Sapori: Il Viaggio Senza Tempo",
+      "description": "Un'esperienza gustativa multidimensionale concepita dalla Chef Luna Celestini per coloro che sono pronti a esplorare i confini del gusto e della percezione.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Foglie di Mandragora",
+        "Foglie di Nebulosa",
+        "Fibra di Sintetex",
+        "Spaghi del Sole",
+        "Pane di Luce",
+        "Fusilli del Vento",
+        "Muffa Lunare",
+        "Chocobo Wings"
+      ],
+      "techniques": [
+        "Affumicatura Psionica Sensoriale",
+        "Modellatura Onirica Tetrazionale",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Pizza Cosmica all'Essenza di Drago con Nebbia Arcobaleno e Funghi Orbitali",
+      "description": "Un'esperienza culinaria che attraversa la trama dell'universo, un piatto che incarna il cuore pulsante di L'Essenza dell'Infinito.",
+      "ingredients": [
+        "Cristalli di Nebulite",
+        "Teste di Idra",
+        "Carne di Drago",
+        "Carne di Balena spaziale",
+        "Granuli di Nebbia Arcobaleno",
+        "Biscotti della Galassia",
+        "Amido di Stellarion",
+        "Funghi Orbitali",
+        "Essenza di Tachioni",
+        "Latte+"
+      ],
+      "techniques": [
+        "Affumicatura a Stratificazione Quantica",
+        "Affumicatura Psionica Sensoriale"
+      ]
+    },
+    {
+      "name": "Mycoflora con Polvere di Stelle Sbagliato",
+      "description": "Una creazione culinaria che vi trasporterà attraverso i confini della realtà e del tempo, risvegliando memorie storiche.",
+      "ingredients": [
+        "Polvere di Stelle",
+        "Colonia di Mycoflora",
+        "Teste di Idra",
+        "Lacrime di Andromeda",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Decostruzione Ancestrale",
+        "Amalgamazione Sintetica Molecolare",
+        "Fermentazione Quantico Biometrica",
+        "Bollitura Termografica a Rotazione Veloce"
+      ]
+    },
+    {
+      "name": "Nebulosa di Sapori dell'Infinito",
+      "description": "Vi invitiamo a intraprendere un viaggio sensoriale attraverso il piatto che sfida il tempo e la realtà stessa.",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Foglie di Nebulosa",
+        "Carne di Xenodonte",
+        "Plasma Vitale",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Saltare in Padella Realtà Energetiche Parallele",
+        "Saltare in Padella Classica",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Sinfonia dell'Infinito: Un Viaggio Gnodale tra Terra e Universi",
+      "description": "Un piatto che vi trasporterà in un'odissea sensoriale attraverso confini inesplorati.",
+      "ingredients": [
+        "Radici di Gravità",
+        "Uova di Fenice",
+        "Carne di Mucca",
+        "Carne di Kraken",
+        "Lacrime di Andromeda",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Affumicatura Psionica Sensoriale",
+        "Affumicatura Temporale Risonante"
+      ]
+    },
+    {
+      "name": "Tris di Verdure con Xenodonte",
+      "description": "Un capolavoro che fonde con maestria sapienza antica e innovazione futuristica.",
+      "ingredients": [
+        "Cristalli di Memoria",
+        "Radici di Gravità",
+        "Foglie di Mandragora",
+        "Foglie di Nebulosa",
+        "Carne di Xenodonte",
+        "Fibra di Sintetex",
+        "Pane degli Abissi",
+        "Essenza di Tachioni"
+      ],
+      "techniques": [
+        "Modellatura Onirica Tetrazionale",
+        "Idro-Cristallizzazione Sonora Quantistica",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Falso Risotto dell'Infinito Multiverso",
+      "description": "Una creazione culinaria che intreccia tradizione, innovazione e la magia dell'universo.",
+      "ingredients": [
+        "Cristalli di Memoria",
+        "Uova di Fenice",
+        "Carne di Balena spaziale",
+        "Granuli di Nebbia Arcobaleno",
+        "Farina di Nettuno",
+        "Funghi Orbitali",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Congelamento Bio-Luminiscente Sincronico",
+        "Fermentazione Psionica Energetica",
+        "Saltare in Padella Realtà Energetiche Parallele",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Taglio Sinaptico Biomimetico"
+      ]
+    }
+  ]
+}

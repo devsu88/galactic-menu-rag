@@ -1,0 +1,170 @@
+{
+  "restaurant": {
+    "name": "Sala del Valhalla",
+    "planet": "Asgard",
+    "chef": {
+      "name": "Alessandro Quantum",
+      "licenses": [
+        "Quantistica Livello 8",
+        "Gravitazionale Livello I",
+        "Antimateria Livello I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Pane e Carne Rivisitato",
+      "description": "Scoprite l'essenza dei sapori galattici con la nostra 'Pane e Carne Rivisitato', una creazione magistrale dello Chef Alessandro Quantum che unisce il meglio di ogni dimensione culinaria.",
+      "ingredients": [
+        "Frammenti di Supernova",
+        "Lattuga Namecciana",
+        "Baccacedro",
+        "Foglie di Nebulosa",
+        "Carne di Drago",
+        "Pane degli Abissi",
+        "Pane di Luce",
+        "Spaghi del Sole",
+        "Plasma Vitale",
+        "Salsa Szechuan"
+      ],
+      "techniques": [
+        "Impasto Gravitazionale Vorticoso",
+        "Cottura a Vapore Termocinetica Multipla",
+        "Saltare in Padella Classica"
+      ]
+    },
+    {
+      "name": "Risotto Cosmico Multiversale",
+      "description": "Immergiti in un viaggio sensoriale tra le stelle con il nostro Risotto Cosmico Multiversale, una creazione culinaria che unisce il meglio di ogni realtà, firmata dallo Chef Alessandro Quantum.",
+      "ingredients": [
+        "Shard di Materia Oscura",
+        "Carne di Xenodonte",
+        "Carne di Mucca",
+        "Granuli di Nebbia Arcobaleno",
+        "Muffa Lunare"
+      ],
+      "techniques": [
+        "Saltare in Padella Realtà Energetiche Parallele",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile"
+      ]
+    },
+    {
+      "name": "Il Risveglio del Multiverso",
+      "description": "Immergetevi in un'esperienza multisensoriale unica con 'Il Risveglio del Multiverso', una creazione che sfida le leggi della fisica e vi accompagna in un viaggio tra dimensioni parallele del gusto.",
+      "ingredients": [
+        "Radici di Singolarità",
+        "Alghe Bioluminescenti",
+        "Foglie di Mandragora",
+        "Granuli di Nebbia Arcobaleno",
+        "Plasma Vitale"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Cottura Sottovuoto Frugale Energeticamente Negativa"
+      ]
+    },
+    {
+      "name": "Sinfonia del Cosmo e della Leggenda",
+      "description": "Lasciatevi trasportare in un viaggio culinario interdimensionale con la nostra 'Sinfonia del Cosmo e della Leggenda', un piatto che sfida la stessa concezione del gusto e dell'esistenza.",
+      "ingredients": [
+        "Carne di Xenodonte",
+        "Carne di Drago",
+        "Teste di Idra",
+        "Funghi Orbitali",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Decostruzione Interdimensionale Lovecraftiana",
+        "Affumicatura tramite Big Bang Microcosmico",
+        "Idro-Cristallizzazione Sonora Quantistica",
+        "Bollitura Infrasonica Armonizzata",
+        "Taglio a Risonanza Sonica Rigenerativa"
+      ]
+    },
+    {
+      "name": "Cosmos Quantum Fusion",
+      "description": "Benvenuti in un'odissea culinaria che vi porterà oltre i confini conosciuti del gusto.",
+      "ingredients": [
+        "Vero Ghiaccio",
+        "Carne di Kraken",
+        "Gnocchi del Crepuscolo",
+        "Funghi Orbitali",
+        "Nduja Fritta Tanto"
+      ],
+      "techniques": [
+        "Affumicatura a Stratificazione Quantica",
+        "Bollitura Infrasonica Armonizzata"
+      ]
+    },
+    {
+      "name": "Più-dimensionale Sinfonia di Sapori: La Carne del Cosmo",
+      "description": "Immergetevi in un'odissea culinaria che trasporta il vostro palato oltre i confini di questa dimensione con la nostra Più-dimensionale Sinfonia di Sapori.",
+      "ingredients": [
+        "Shard di Prisma Stellare",
+        "Carne di Balena spaziale",
+        "Carne di Xenodonte",
+        "Pane degli Abissi",
+        "Muffa Lunare",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Idro-Cristallizzazione Sonora Quantistica",
+        "Impasto Gravitazionale Vorticoso",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile"
+      ]
+    },
+    {
+      "name": "Plasma Celestiale al Risotto di Kraken nell'Aura del Sole",
+      "description": "Benvenuti in una dimensione culinaria straordinaria, dove il tempo si ferma e l'infinito diventa un boccone.",
+      "ingredients": [
+        "Cristalli di Memoria",
+        "Fibra di Sintetex",
+        "Carne di Kraken",
+        "Spaghi del Sole",
+        "Granuli di Nebbia Arcobaleno",
+        "Biscotti della Galassia",
+        "Essenza di Vuoto"
+      ],
+      "techniques": [
+        "Cottura a Forno Dinamico Inversionale",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile",
+        "Taglio a Risonanza Sonica Rigenerativa"
+      ]
+    },
+    {
+      "name": "Risotto Interdimensionale alla Carne di Drago e Balena Spaziale con Biscotti della Galassia Croccanti",
+      "description": "Nel cuore del nostro multiverso culinario, vi presentiamo un viaggio attraverso le dimensioni del gusto: un risotto che sfida ogni legge della fisica tradizionale.",
+      "ingredients": [
+        "Baccacedro",
+        "Liane di Plasmodio",
+        "Radici di Gravità",
+        "Carne di Drago",
+        "Carne di Balena spaziale",
+        "Biscotti della Galassia",
+        "Pane di Luce",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Saltare in Padella Classica",
+        "Affettamento a Pulsazioni Quantistiche"
+      ]
+    },
+    {
+      "name": "Alternate Realities Risotto",
+      "description": "Esplora una sinfonia di sapori che sfida le leggi dell'universo con il nostro 'Alternate Realities Risotto'.",
+      "ingredients": [
+        "Polvere di Stelle",
+        "Radici di Singolarità",
+        "Carne di Balena spaziale",
+        "Carne di Drago",
+        "Riso di Cassandra",
+        "Nettare di Sirena",
+        "Sale Temporale"
+      ],
+      "techniques": [
+        "Sinergia Elettro-Osmotica Programmabile",
+        "Grigliatura Eletro-Molecolare a Spaziatura Variabile"
+      ]
+    }
+  ]
+}

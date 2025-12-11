@@ -1,0 +1,159 @@
+{
+  "restaurant": {
+    "name": "Stelle Astrofisiche",
+    "planet": "Krypton",
+    "chef": {
+      "name": "Alessandro Zod-Marinetti",
+      "licenses": [
+        "Licenza Quantistica Q: 4",
+        "Licenza Luce c: III",
+        "Licenza Gravitazionale G:II",
+        "Licenza Antimateria e+: I"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Viaggio Cosmico tra Mare e Stelle",
+      "description": "Preparati a immergerti in un'odissea culinaria che trascende tempo e spazio, progettata dal visionario Chef Alessandro Marinetti. Questo piatto esemplifica la fusione perfetta tra tradizione e innovazione, integrando elementi del cosmo e delle profondità marine per una sinfonia di sapori e scoperte.",
+      "ingredients": [
+        "Carne di Balena Spaziale",
+        "Carne di Kraken",
+        "Teste di Idra",
+        "Lacrime di Andromeda",
+        "Riso di Cassandra",
+        "Pane degli Abissi",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Cottura a Vapore Termocinetica Multipla",
+        "Taglio a Risonanza Sonica Rigenerativa",
+        "Cottura con Microonde Entropiche Sincronizzate"
+      ]
+    },
+    {
+      "name": "Nebulosa di Dragone all'Essenza di Vuoto",
+      "description": "Un'opera d'arte che celebra la relazione tra il cosmo e l'arte gastronomica.",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Polvere di stelle",
+        "Carne di Drago",
+        "Spore Quantiche",
+        "Essenza di Vuoto"
+      ],
+      "techniques": [
+        "Bollitura Termografica a Rotazione Veloce",
+        "Sinergia elettro-osmotica programmabile"
+      ]
+    },
+    {
+      "name": "Il Viaggio Cosmico di Marinetti",
+      "description": "Un piatto che sfida la percezione del tempo e dello spazio.",
+      "ingredients": [
+        "Pane degli Abissi",
+        "Polvere di Crononite",
+        "Teste di Idra",
+        "Granuli di Nebbia Arcobaleno",
+        "Alghe Bioluminescenti",
+        "Colonia di Mycoflora"
+      ],
+      "techniques": [
+        "Amalgamazione Sintetica Molecolare",
+        "Cryo-Tessitura Energetica Polarizzata"
+      ]
+    },
+    {
+      "name": "Piastrella Celestiale di Gnocchi del Crepuscolo con Nebulosa di Riso di Cassandra, Lacrime di Unicorno e Velo di Materia Oscura",
+      "description": "Gli Gnocchi del Crepuscolo, morbidi e vellutati, vengono delicatamente avvolti in una danza di vapore.",
+      "ingredients": [
+        "Gnocchi del Crepuscolo",
+        "Nebulosa di Riso di Cassandra",
+        "Lacrime di Unicorno",
+        "Materia Oscura"
+      ],
+      "techniques": [
+        "Cottura a Vapore Termocinetica Multipla",
+        "Amalgamazione Sintetica Molecolare",
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche"
+      ]
+    },
+    {
+      "name": "Sinfonia Celeste di Granuli Arcobaleno e Riso di Cassandra",
+      "description": "Un piatto che trascende il tempo e lo spazio attraverso l'innovazione gastronomica.",
+      "ingredients": [
+        "Granuli di Nebbia Arcobaleno",
+        "Riso di Cassandra",
+        "Fusilli del Vento",
+        "Essenza di Speziaria",
+        "Nettare di Sirena"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Bollitura Termografica a Rotazione Veloce",
+        "Amalgamazione Sintetica Molecolare"
+      ]
+    },
+    {
+      "name": "Cosmos in Tavola",
+      "description": "Un piatto che sfida la comprensione e stimola i sensi più profondi.",
+      "ingredients": [
+        "Gnocchi del Crepuscolo",
+        "Carne di Drago",
+        "Cristalli di Nebulite",
+        "Amido di Stellarion",
+        "Nettare di Sirena",
+        "Biscotti della Galassia"
+      ],
+      "techniques": [
+        "Cottura a Vapore Termocinetica Multipla",
+        "Saltare in Padella Classica"
+      ]
+    },
+    {
+      "name": "Eclissi del Drago nell'Abbraccio del Kraken",
+      "description": "Un piatto che sfida l'immaginazione e veste il vostro palato di nuove realtà.",
+      "ingredients": [
+        "Carne di Drago",
+        "Carne di Kraken",
+        "Riso di Cassandra",
+        "Colonia di Mycoflora",
+        "Plasma Vitale",
+        "Shard di Materia Oscura"
+      ],
+      "techniques": [
+        "Grigliatura Elettro-Molecolare a Spaziatura Variabile"
+      ]
+    },
+    {
+      "name": "Sinfonia Quantica Galattica",
+      "description": "Una creazione che trascende i confini della percezione e della realtà.",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Carne di Drago",
+        "Riso di Cassandra",
+        "Salsa Szechuan",
+        "Biscotti della Galassia"
+      ],
+      "techniques": [
+        "Taglio a Risonanza Sonica Rigenerativa",
+        "Cottura a Vapore Termocinetica Multipla"
+      ]
+    },
+    {
+      "name": "Sinfonia Galattica Agentica",
+      "description": "Un piatto gemello della sua versione Quantica, che trasforma gli elementi del cosmo in un'esperienza sensoriale straordinaria.",
+      "ingredients": [
+        "Pane di Luce",
+        "Carne di Drago",
+        "Carne di Balena spaziale",
+        "Carne di Kraken",
+        "Plasma Vitale"
+      ],
+      "techniques": [
+        "Cottura con Microonde Entropiche Sincronizzate",
+        "Cryo-Tessitura Energetica Polarizzata",
+        "Taglio a Risonanza Sonica Rigenerativa"
+      ]
+    }
+  ]
+}

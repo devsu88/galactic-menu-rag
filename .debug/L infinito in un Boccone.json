@@ -1,0 +1,193 @@
+{
+  "restaurant": {
+    "name": "L'Infinito in un Boccone",
+    "planet": "Krypton",
+    "chef": {
+      "name": "Alessandro Quantum",
+      "licenses": [
+        "Psionica certificata di livello II",
+        "Temporale certificata di livello II",
+        "Gravitazionale certificata di livello II",
+        "Quantistica certificata di livello 7",
+        "Luce certificata di livello I",
+        "LTK certificata di livello VI+"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Universo in Fluttuazione",
+      "description": "Il piatto si apre con una nube eterea di Vero Ghiaccio, scorza artica di incommensurabile purezza, levitante sopra un delicato strato di Farina di Nettuno, lavorata con maestria nella nostra esclusiva Fermentazione Quantica a Strati Multiversali.",
+      "ingredients": [
+        "Vero Ghiaccio",
+        "Farina di Nettuno",
+        "Pane di Luce",
+        "Carne di Drago",
+        "Lacrime di Unicorno",
+        "Amido di Stellarion"
+      ],
+      "techniques": [
+        "Fermentazione Quantica a Strati Multiversali",
+        "Cottura Sottovuoto Multirealità Collassante",
+        "Taglio a Risonanza Sonica Rigenerativa",
+        "manipolazioni della Luce (I)"
+      ]
+    },
+    {
+      "name": "Sinfonia Astrale - Risotto Multiversale con Risacca Celeste",
+      "description": "Benvenuti nel cuore pulsante del cosmo, dove la nostra Sinfonia Astrale vi farà danzare sulle note complesse e raffinate dell’universo gastronomico.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Brodo di Teste di Idra",
+        "Carne di Xenodonte",
+        "Polvere di Pulsar",
+        "Lattuga Namecciana",
+        "Amido di Stellarion",
+        "Lacrime di Andromeda"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Multirealità Collassante",
+        "Bollitura Termografica a Rotazione Veloce",
+        "Congelazione Iperdimensionalmente Stratificata"
+      ]
+    },
+    {
+      "name": "Sinfonia Temporale Galattica",
+      "description": "Benvenuti in un viaggio attraverso le sinfonie del multiverso culinario, dove la realtà si piega e i sapori sfidano l'immaginabile.",
+      "ingredients": [
+        "Colonies di Mycoflora",
+        "Fibra di Sintetex",
+        "Cristalli di Nebulite",
+        "Spore Quantiche",
+        "Bacche di Baccacedro",
+        "Sale Temporale"
+      ],
+      "techniques": [
+        "Affettamento a pulsazioni quantistiche",
+        "Cottura Sottovuoto frugale energeticamente negativa",
+        "Cottura Olografica Quantum Fluttuante"
+      ]
+    },
+    {
+      "name": "Sinfonia del Multiverso di Gusto",
+      "description": "Esplorate le profondità del sapore con la nostra 'Sinfonia del Multiverso di Gusto', un piatto che vi accompagnerà in una danza attraverso infinite dimensioni culinarie.",
+      "ingredients": [
+        "Amido di Stellarion",
+        "Fusilli del Vento",
+        "Granuli di Nebbia Arcobaleno",
+        "Carne di Xenodonte",
+        "Carne di Kraken",
+        "Carne di Mucca",
+        "Erba Pipa"
+      ],
+      "techniques": [
+        "Cottura a Vapore Ecodinamico Bilanciato",
+        "Decostruzione Interdimensionale Lovecraftiana",
+        "Fermentazione Psionica Energetica"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica",
+      "description": "Benvenuti in una dimensione di gusto inedita, dove il confine tra il reale e l’immaginario si dissolve.",
+      "ingredients": [
+        "Shard di Prisma Stellare",
+        "Granuli di Nebbia Arcobaleno",
+        "Carne di Balena Spaziale",
+        "Radici di Singolarità",
+        "Pane degli Abissi",
+        "Funghi dell’Etere",
+        "Essenza di Vuoto",
+        "Baccacedro caramellato"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Affettamento a Pulsazioni Quantistiche"
+      ]
+    },
+    {
+      "name": "Danza Cosmica al Crepuscolo",
+      "description": "Scopri un'esperienza culinaria che intreccia la realtà con i toni del mito, un piatto che invita il tuo palato a danzare tra le stelle.",
+      "ingredients": [
+        "Gnocchi del Crepuscolo",
+        "Carne di Drago",
+        "Muffa Lunare",
+        "Polvere di Stelle",
+        "Essenza di Vuoto"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Multirealità Collassante",
+        "Fermentazione Quantico Biometrica"
+      ]
+    },
+    {
+      "name": "Sinfonia Astrale",
+      "description": "Un capolavoro culinario che vi accompagna in un viaggio attraverso le dimensioni del gusto, la nostra Sinfonia Astrale è un tributo alla magia millenaria di L'Infinito in un Boccone.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Pane degli Abissi",
+        "Gnocchi del Crepuscolo",
+        "Nduja Fritta",
+        "Uova di Fenice",
+        "Lacrime di Unicorno",
+        "Frammenti di Supernova"
+      ],
+      "techniques": [
+        "Bollitura Infrasonica Armonizzata",
+        "Saltare in Padella Realtà Energetiche Parallele"
+      ]
+    },
+    {
+      "name": "Dimensioni di Sapori Infusi",
+      "description": "Componi un viaggio sensoriale che trascende il tempo e lo spazio con il nostro piatto esclusivo.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Carne di Mucca",
+        "Pane di Luce",
+        "Colonia di Mycoflora",
+        "Nettare di Sirena",
+        "Foglie di Nebulosa"
+      ],
+      "techniques": [
+        "Idro-Cristallizzazione Sonora Quantistica",
+        "Affumicatura Temporale Risonante",
+        "Saltare in Padella Realtà Energetiche Parallele"
+      ]
+    },
+    {
+      "name": "Cosmos Culinary Symphony",
+      "description": "Benvenuti a un viaggio irripetibile nel cuore dell'infinito culinario.",
+      "ingredients": [
+        "Biscotti della Galassia",
+        "Spaghi del Sole",
+        "Carne di Mucca",
+        "Salsa Szechuan",
+        "Radici di Gravità",
+        "Uova di Fenice",
+        "Lattuga Namecciana",
+        "Vero Ghiaccio"
+      ],
+      "techniques": [
+        "Affettamento a pulsazioni quantistiche",
+        "Cottura Sottovuoto Bioma Sintetico"
+      ]
+    },
+    {
+      "name": "Portale delle Meraviglie",
+      "description": "Esplorate l'infinito in un singolo assaggio con il nostro piatto stellare.",
+      "ingredients": [
+        "Pane di Luce",
+        "Carne di Balena spaziale",
+        "Carne di Drago",
+        "Radici di Singolarità",
+        "Uovo di Fenice",
+        "Granuli di Nebbia Arcobaleno",
+        "Essenza di Speziaria",
+        "Vero Ghiaccio"
+      ],
+      "techniques": [
+        "Cottura Sottovuoto Frugale Energeticamente Negativa",
+        "Marinatura Temporale Sincronizzata"
+      ]
+    }
+  ]
+}

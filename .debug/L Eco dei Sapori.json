@@ -1,0 +1,191 @@
+{
+  "restaurant": {
+    "name": "Eco dei Sapori",
+    "planet": "Ego",
+    "chef": {
+      "name": "Aurora Vessanti",
+      "licenses": [
+        "LTK III",
+        "P V",
+        "certificazione Antimateria di livello I",
+        "certificazione Magnetica di livello I",
+        "certificazione Luce di livello II"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "name": "Galassia Infinita: Viaggio tra Memorie e Stelle",
+      "description": "Un omaggio alle sfere celesti e ai ricordi che esse custodiscono.",
+      "ingredients": [
+        "Pane di Luce",
+        "Spore Quantiche",
+        "Proteine di mare e terra",
+        "Essenza di Tachioni",
+        "Farina di Nettuno",
+        "Sferificazione tramite Matrici Biofotiche",
+        "Cristalli di Memoria",
+        "Biscotti della Galassia",
+        "Zucchero cosmico",
+        "Scaglie di stelle"
+      ],
+      "techniques": [
+        "Marinatura Temporale Sincronizzata",
+        "Sferificazione tramite Matrici Biofotiche"
+      ]
+    },
+    {
+      "name": "Eterna Sinfonia del Cosmo",
+      "description": "Un viaggio culinario che trascende il tempo e lo spazio.",
+      "ingredients": [
+        "Carne di mucca",
+        "Nettare di Sirena",
+        "Cottura Idrodinamica Autoregolante",
+        "Teste di idra",
+        "Alghe Bioluminescenti",
+        "Biscotti della Galassia",
+        "Shard di Materia Oscura",
+        "Essenza di Speziaria"
+      ],
+      "techniques": [
+        "Marinatura Sotto Zero a Polarità Inversa",
+        "Cottura Idrodinamica Autoregolante",
+        "Decostruzione Magnetica Risonante",
+        "Bollitura Infrasonica Armonizzata"
+      ]
+    },
+    {
+      "name": "Sinfonia Cosmica di Aurora",
+      "description": "Un viaggio tra le stelle e i ricordi.",
+      "ingredients": [
+        "Riso di Cassandra",
+        "Pane di Luce",
+        "Granuli di Nebbia Arcobaleno",
+        "Erba Pipa",
+        "Polvere di Pulsar"
+      ],
+      "techniques": [
+        "Ebollizione Magneto-Cinetica Pulsante",
+        "Incisione Elettromagnetica Plasmica"
+      ]
+    },
+    {
+      "name": "Galaxia Gustativa",
+      "description": "Una sinfonia creata esclusivamente per chi desidera trascendere i confini del gusto e della realtà.",
+      "ingredients": [
+        "Amido di Stellarion",
+        "Shard di Materia Oscura",
+        "Funghi Orbitali",
+        "Granuli di Nebbia Arcobaleno",
+        "Baccacedro"
+      ],
+      "techniques": [
+        "Fermentazione Quantico Biometrica",
+        "Bollitura Infrasonica Armonizzata",
+        "Cryo-Tessitura Energetica Polarizzata"
+      ]
+    },
+    {
+      "name": "Crescendo Cosmico",
+      "description": "Un’esperienza culinaria senza pari concepita dalla geniale maestria della Chef Aurora Vessanti.",
+      "ingredients": [
+        "Spaghi del Sole",
+        "Gnocchi del Crepuscolo",
+        "Carni succulente di Xenodonte",
+        "Radici di Singolarità",
+        "Colonia di Mycoflora",
+        "Spore Quantiche"
+      ],
+      "techniques": [
+        "Amalgamazione Sintetica Molecolare",
+        "Congelamento Bio-Luminiscente Sincronico"
+      ]
+    },
+    {
+      "name": "Simfonia Celeste di Aurora",
+      "description": "Un viaggio culinario multisensoriale che combina l'arte della Superposizione Culinaria Quantistica.",
+      "ingredients": [
+        "Fusilli del Vento",
+        "Carne di Xenodonte",
+        "Mousse vellutata di Amido di Stellarion",
+        "Colonia di Mycoflora",
+        "Polvere di Pulsar",
+        "Muffa Lunare"
+      ],
+      "techniques": [
+        "Cottura a Vapore con Flusso di Particelle Isoarmoniche",
+        "Decostruzione Magnetica Risonante",
+        "Cryo-Tessitura Energetica Polarizzata"
+      ]
+    },
+    {
+      "name": "Portale del Cosmo: Sinfonia di Sapori e Tempi",
+      "description": "Un viaggio culinario multidimensionale creato per incantare i sensi e stimolare l'immaginazione.",
+      "ingredients": [
+        "Pane degli Abissi",
+        "Muffa Lunare",
+        "Fibra di Sintetex",
+        "Radici di Gravità",
+        "Colonia di Mycoflora",
+        "Shard di Prisma Stellare",
+        "Baccacedro",
+        "Nduja Fritta Tanto",
+        "Pane di Luce",
+        "Biscotti della Galassia"
+      ],
+      "techniques": [
+        "Marinatura Psionica",
+        "Affumicatura Temporal Risonante"
+      ]
+    },
+    {
+      "name": "Verso l'Inedito Oltre",
+      "description": "Un'ode alla multidimensionalità dei sapori.",
+      "ingredients": [
+        "Lattuga Namecciana",
+        "Carne di Drago",
+        "Carne di Mucca",
+        "Nettare di Sirena",
+        "Teste di Idra",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Incisioni elettromagnetiche plasmatiche"
+      ]
+    },
+    {
+      "name": "Sinfonia di Galassie Perdute",
+      "description": "Esplora un viaggio sensoriale unico.",
+      "ingredients": [
+        "Radici di Singolarità",
+        "Lattuga Namecciana",
+        "Muffa Lunare",
+        "Cristalli di Memoria",
+        "Spezie Melange"
+      ],
+      "techniques": [
+        "Incisione Elettromagnetica Plasmica",
+        "Stratificazione Quantica"
+      ]
+    },
+    {
+      "name": "Sinfonia degli Elementi Eterni",
+      "description": "Un'opera culinaria che intreccia la trama dell'universo in un solo piatto.",
+      "ingredients": [
+        "Liane di Plasmodio",
+        "Radici di Singolarità",
+        "Foglie di Mandragora",
+        "Uova di Fenice",
+        "Carne di Kraken",
+        "Farina di Nettuno",
+        "Pane di Luce",
+        "Lacrime di Andromeda"
+      ],
+      "techniques": [
+        "Bollitura termografica a rotazione veloce",
+        "fermentazione quantico biometrica",
+        "sferificazione filamentare a molecole vibrazionali"
+      ]
+    }
+  ]
+}
