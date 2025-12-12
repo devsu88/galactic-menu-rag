@@ -1,3 +1,6 @@
+"""Pipeline di ingestion per processare menu PDF e salvarli in Qdrant."""
+
+import logging
 import os
 import glob
 from typing import List
@@ -9,60 +12,91 @@ from datapizza.vectorstores.qdrant import QdrantVectorstore
 from datapizza.core.vectorstore import VectorConfig
 
 from src.ingestion.parsers import GalacticMenuParser
+from src.utils.config import (
+    QDRANT_HOST,
+    QDRANT_PORT,
+    QDRANT_COLLECTION_NAME,
+    EMBEDDING_MODEL,
+    EMBEDDING_DIMENSIONS,
+    EMBEDDING_NAME,
+    NODE_SPLITTER_MAX_CHAR
+)
+
+logger = logging.getLogger(__name__)
+
 
 def list_pdf_files(directory: str) -> List[str]:
+    """
+    Lista tutti i file PDF in una directory.
+    
+    Args:
+        directory: Path della directory da esplorare
+        
+    Returns:
+        Lista di path assoluti dei file PDF trovati
+    """
     return glob.glob(os.path.join(directory, "*.pdf"))
 
+
 def run_ingestion(data_dir: str):
-    print("Inizializzazione Ingestion Pipeline...")
+    """
+    Esegue la pipeline di ingestion per processare menu PDF.
     
-    # 2. Setup Vector Store
-    # Qdrant locale su localhost (default port 6333)
+    La pipeline:
+    1. Inizializza Qdrant vector store (localhost:6333)
+    2. Crea la collection "galactic_menu" se non esiste
+    3. Configura i moduli: parser, splitter, embedder
+    4. Processa tutti i PDF nella directory specificata
+    5. Salva i chunk con embeddings in Qdrant
+    
+    Args:
+        data_dir: Path della directory contenente i file PDF da processare
+        
+    Raises:
+        ValueError: Se OPENAI_API_KEY non è configurata
+    """
+    logger.info("Inizializzazione Ingestion Pipeline...")
+    
     vector_store = QdrantVectorstore(
-        host="localhost",
-        port=6333
+        host=QDRANT_HOST,
+        port=QDRANT_PORT
     )
     
-    # Create collection if not exists (dimensione embedding ada-002/3-small è 1536)
     vector_store.create_collection(
-        collection_name="galactic_menu",
-        vector_config=[VectorConfig(name="default", dimensions=1536)]
+        collection_name=QDRANT_COLLECTION_NAME,
+        vector_config=[VectorConfig(name=EMBEDDING_NAME, dimensions=EMBEDDING_DIMENSIONS)]
     )
     
-    # 3. Setup Pipeline
-    # Usiamo NodeSplitter per gestire descrizioni lunghe e ChunkEmbedder per l'efficienza
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError("OPENAI_API_KEY non trovata nelle variabili d'ambiente")
         
-    embedder_client = OpenAIEmbedder(model_name="text-embedding-3-small", api_key=api_key)
+    embedder_client = OpenAIEmbedder(model_name=EMBEDDING_MODEL, api_key=api_key)
     
     pipeline = IngestionPipeline(
         modules=[
             GalacticMenuParser(),
-            NodeSplitter(max_char=1000), # Divide nodi troppo grandi
-            ChunkEmbedder(client=embedder_client, embedding_name="default") # Wrapper per batching
+            NodeSplitter(max_char=NODE_SPLITTER_MAX_CHAR),
+            ChunkEmbedder(client=embedder_client, embedding_name=EMBEDDING_NAME)
         ],
         vector_store=vector_store,
-        collection_name="galactic_menu"
+        collection_name=QDRANT_COLLECTION_NAME
     )
     
-    # 4. Get Files
     files = list_pdf_files(data_dir)
     
     if not files:
-        print(f"Nessun file PDF trovato in {data_dir}")
+        logger.warning(f"Nessun file PDF trovato in {data_dir}")
         return
 
-    print(f"Trovati {len(files)} files da processare.")
+    logger.info(f"Trovati {len(files)} files da processare.")
     
-    # 5. Run Pipeline    
     for file in files:
         try:
             pipeline.run(file_path=file)
-            print(f"Ingested: {os.path.basename(file)}")
+            logger.info(f"Ingested: {os.path.basename(file)}")
         except Exception as e:
-            print(f"Failed to ingest {file}: {e}")
+            logger.error(f"Failed to ingest {file}: {e}")
             
-    print("Ingestion completata con successo.")
+    logger.info("Ingestion completata con successo.")
 

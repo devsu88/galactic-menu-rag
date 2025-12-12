@@ -1,50 +1,61 @@
+"""Filtro LLM finale per verificare rigorosamente i piatti candidati."""
+
+import logging
 import os
 import json
 from typing import List, Any
 from datapizza.core.models import PipelineComponent
 from datapizza.clients.openai import OpenAIClient
+from src.utils.prompts import VERIFY_DISHES_PROMPT
+from src.utils.config import LLM_MODEL
+
+logger = logging.getLogger(__name__)
+
 
 class DishFilter(PipelineComponent):
     """
-    Modulo custom per filtrare i risultati della ricerca usando LLM.
-    Verifica che i piatti candidati soddisfino esattamente i vincoli della query.
+    Filtro LLM finale per verificare che i piatti candidati soddisfino esattamente i vincoli della query.
+    
+    Riceve i chunk dalla ricerca vettoriale e usa un LLM per verificare rigorosamente
+    quali piatti soddisfano tutti i requisiti della query (pianeta, ristorante, chef, ingredienti, tecniche).
     """
+    
     def __init__(self):
+        """Inizializza il componente con il client LLM."""
         super().__init__()
         self.llm_client = OpenAIClient(
             api_key=os.getenv("OPENAI_API_KEY"),
-            model="gpt-4o-mini"
+            model=LLM_MODEL
         )
     
     def _run(self, query: str, chunks: List[Any], **kwargs) -> List[str]:
         """
-        Input:
-            - query: La domanda dell'utente
-            - chunks: Lista di risultati dalla ricerca vettoriale (Node objects con metadata)
-        Output:
-            - Lista di nomi di piatti che soddisfano la query
+        Filtra i chunk candidati usando un LLM per verificare che soddisfino la query.
+        
+        Args:
+            query: La domanda dell'utente
+            chunks: Lista di Node objects dalla ricerca vettoriale con metadata
+            **kwargs: Argomenti aggiuntivi per compatibilità
+            
+        Returns:
+            Lista di nomi di piatti che soddisfano esattamente la query
         """
-        print(f"[DEBUG DishFilter] Ricevuti {len(chunks) if chunks else 0} chunks")
+        chunks_count = len(chunks) if chunks else 0
+        logger.info(f"[DishFilter] Ricevuti {chunks_count} chunks da filtrare")
         
         if not chunks:
-            print("[DEBUG DishFilter] Nessun chunk ricevuto, ritorno lista vuota")
+            logger.warning("[DishFilter] Nessun chunk ricevuto, ritorno lista vuota")
             return []
         
-        # Estrai informazioni dai chunks (Node objects)
         candidates = []
         for i, chunk in enumerate(chunks):
-            # I chunks sono Node objects con metadata
             metadata = getattr(chunk, 'metadata', {}) or {}
             dish_name = metadata.get('dish_name')
             
-            # print(f"[DEBUG DishFilter] Chunk {i}: dish_name={dish_name}, metadata_keys={list(metadata.keys()) if metadata else []}")
-            
             if dish_name:
-                # Estrai ingredienti e tecniche dai metadati
                 ingredients = metadata.get('raw_ingredients', [])
                 techniques = metadata.get('raw_techniques', [])
                 
-                # Se raw_ingredients non è una lista, prova a parsarlo
                 if not isinstance(ingredients, list):
                     if isinstance(ingredients, str):
                         ingredients = [ing.strip() for ing in ingredients.split(',') if ing.strip()]
@@ -57,60 +68,57 @@ class DishFilter(PipelineComponent):
                     else:
                         techniques = []
                 
-                candidates.append({
+                candidate_info = {
                     "name": dish_name,
                     "planet": metadata.get('planet'),
                     "restaurant_name": metadata.get('restaurant_name'),
                     "chef_name": metadata.get('chef_name'),
                     "ingredients": ingredients,
                     "techniques": techniques
-                })
-                # print(f"[DEBUG DishFilter] Aggiunto candidato: {dish_name} con {len(ingredients)} ingredienti")
+                }
+                candidates.append(candidate_info)
+                logger.debug(f"[DishFilter] Candidato {i+1}: {dish_name} (ingredienti: {len(ingredients)}, tecniche: {len(techniques)})")
         
         if not candidates:
-            print("[DEBUG DishFilter] Nessun candidato estratto dai chunks")
+            logger.warning("[DishFilter] Nessun candidato estratto dai chunks")
             return []
         
-        print(f"[DEBUG DishFilter] Totale candidati: {len(candidates)}")
-        # Usa LLM per verificare quali candidati soddisfano la query
+        logger.info(f"[DishFilter] Estratti {len(candidates)} candidati da {chunks_count} chunks")
+        logger.info(f"[DishFilter] Applicazione filtro LLM su {len(candidates)} candidati...")
         verified_names = self._verify_with_llm(query, candidates)
-        print(f"[DEBUG DishFilter] Piatti verificati: {verified_names}")
+        logger.info(f"[DishFilter] ✓ Filtro LLM completato: {len(verified_names)} piatti verificati su {len(candidates)} candidati")
+        logger.debug(f"[DishFilter] Piatti verificati: {verified_names}")
         return verified_names
     
     def _verify_with_llm(self, query: str, candidates: List[dict]) -> List[str]:
-        prompt = f"""
-        Sei un giudice culinario rigoroso. Il tuo scopo è quello di selezionare i piatti che soddisfano ESATTAMENTE la richiesta dell'utente.
-        Analizza la domanda per individuare le informazioni rilevanti:
-        - Pianeta
-        - Ristorante
-        - Chef
-        - Ingredienti
-        - Tecniche
-        
-        Domanda Utente: "{query}"
-        
-        IMPORTANTE: 
-        - Se la domanda menziona un pianeta specifico, cerca tutti i piatti che hanno quel pianeta (planet);
-        - Se la domanda menziona un ristorante specifico, cerca tutti i piatti che hanno quel ristorante (restaurant_name);
-        - Se la domanda menziona un chef specifico, cerca tutti i piatti che hanno quel chef (chef_name);
-        - Se la domanda menziona un ingrediente specifico, cerca quell'ingrediente ESATTO nella lista degli ingredienti del piatto (ingredients); ignora descrizioni aggiuntive, concentrati solo sul nome dell'ingrediente.
-        - Se la domanda menziona una tecnica specifica, cerca quella tecnica ESATTA nella lista delle tecniche del piatto (techniques); ignora descrizioni aggiuntive, concentrati solo sul nome della tecnica.
-        
-        Ecco una lista di piatti candidati (con pianeta, ristorante, chef, ingredienti e tecniche):
-        {json.dumps(candidates, indent=2, ensure_ascii=False)}
-        
-        Compito: Restituisci una lista JSON di stringhe contenente SOLO i nomi dei piatti che soddisfano ESATTAMENTE la richiesta dell'utente.
-        Se nessun piatto soddisfa la richiesta, restituisci una lista vuota [].
-        
-        Output format: ["Nome Piatto A", "Nome Piatto B"]
         """
+        Verifica con LLM quali candidati soddisfano esattamente la query.
+        
+        Args:
+            query: Query originale dell'utente
+            candidates: Lista di dizionari con informazioni sui piatti candidati
+            
+        Returns:
+            Lista di nomi di piatti che soddisfano la query
+        """
+        logger.debug(f"[DishFilter] Invio richiesta LLM per verificare {len(candidates)} candidati")
+        logger.debug(f"[DishFilter] Query: '{query}'")
+        
+        prompt = VERIFY_DISHES_PROMPT(query, candidates)
         
         try:
-            # print(f"[DEBUG DishFilter] Prompt: {prompt}")
+            logger.debug("[DishFilter] Invocazione LLM...")
             response = self.llm_client.invoke(prompt)
             content = response.text if hasattr(response, 'text') else str(response)
             content = content.replace("```json", "").replace("```", "").strip()
-            return json.loads(content)
-        except Exception:
+            verified = json.loads(content)
+            logger.debug(f"[DishFilter] Risposta LLM ricevuta: {len(verified)} piatti verificati")
+            return verified
+        except json.JSONDecodeError as e:
+            logger.error(f"[DishFilter] ✗ Errore nel parsing JSON dalla risposta LLM: {e}")
+            logger.debug(f"[DishFilter] Contenuto risposta: {content[:200] if 'content' in locals() else 'N/A'}")
+            return []
+        except Exception as e:
+            logger.error(f"[DishFilter] ✗ Errore durante la verifica LLM: {e}")
             return []
 

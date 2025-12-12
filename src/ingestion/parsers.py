@@ -1,58 +1,71 @@
+"""Parser custom per estrarre dati strutturati da menu PDF galattici."""
+
+import logging
 import os
 import json
 from typing import List, Any
 from datapizza.core.models import PipelineComponent
 from datapizza.type.type import Node
 from datapizza.clients.openai import OpenAIClient
-# from datapizza.modules.parsers.docling import DoclingParser # Removed
 from llama_cloud_services import LlamaParse
 from src.models.dish import Dish
-from src.utils.config import DEBUG_DIR
+from src.utils.config import DEBUG_DIR, LLM_MODEL, LLAMAPARSE_LANGUAGE
+from src.utils.prompts import EXTRACT_STRUCTURED_DATA_PROMPT
+
+logger = logging.getLogger(__name__)
 
 class GalacticMenuParser(PipelineComponent):
+    """
+    Parser custom per estrarre dati strutturati da menu PDF.
+    
+    Utilizza LlamaParse per l'estrazione del testo e un LLM per convertire
+    il testo grezzo in dati strutturati (ristorante, piatti, ingredienti, tecniche).
+    """
+    
     def __init__(self):
         super().__init__()
         
-        # Inizializza LlamaParse
         self.parser = LlamaParse(
             api_key=os.getenv("LLAMA_CLOUD_API_KEY"),
             verbose=True,
-            language="it" # I menu sono in italiano
+            language=LLAMAPARSE_LANGUAGE
         )
         
-        # Inizializza client OpenAI
         self.client = OpenAIClient(
             api_key=os.getenv("OPENAI_API_KEY"),
-            model="gpt-4o-mini"
+            model=LLM_MODEL
         ) 
 
     def _run(self, file_path: str, **kwargs) -> Node:
         """
-        Input: path del file PDF
-        Output: Singolo Node root che contiene i piatti come children
+        Processa un file PDF di menu e restituisce un Node root con i piatti come children.
+        
+        Args:
+            file_path: Path del file PDF da processare
+            **kwargs: Argomenti aggiuntivi per compatibilità con PipelineComponent
+            
+        Returns:
+            Node root contenente tutti i piatti estratti come children.
+            Se l'estrazione fallisce, restituisce un nodo vuoto con metadata di errore.
         """
-        # 1. Estrai testo grezzo usando LlamaParse
         text_content = self._extract_text_with_llama(file_path)
 
-        print(f"\n\n\n[DEBUG] Text content: {text_content}\n\n\n")
+        logger.debug(f"Text content estratto: {len(text_content)} caratteri")
         
         if not text_content:
-            # Restituiamo un nodo vuoto per non bloccare la pipeline
+            logger.warning(f"Nessun testo estratto da {file_path}")
             return Node(content="Menu vuoto", metadata={"file_path": file_path, "error": "no_text_extracted"})
         
-        # 2. Usa LLM per estrarre JSON strutturato
         structured_data = self._extract_structured_data(text_content)
 
-        print(f"\n\n\n[DEBUG] Structured data: {structured_data}\n\n\n")
+        logger.debug(f"Dati strutturati estratti: {len(structured_data.get('dishes', []))} piatti")
         
-        # Salva il JSON estratto nella cartella .debug per debug
         os.makedirs(DEBUG_DIR, exist_ok=True)
         base_name = os.path.splitext(os.path.basename(file_path))[0]
         debug_file = os.path.join(DEBUG_DIR, f"{base_name}.json")
         with open(debug_file, 'w', encoding='utf-8') as f:
             json.dump(structured_data, f, indent=2, ensure_ascii=False)
         
-        # 3. Converti in Nodi Datapizza
         nodes = []
         
         restaurant_info = structured_data.get("restaurant", {})
@@ -74,8 +87,6 @@ class GalacticMenuParser(PipelineComponent):
                 description=dish_data.get("description", "")
             )
             
-            # Creiamo un Nodo per ogni piatto
-            # Il testo del nodo è una combinazione descrittiva per la ricerca semantica
             node_text = f"Piatto: {dish.name}\nRistorante: {dish.restaurant_name}\nDescrizione: {dish.description}\nIngredienti: {', '.join(dish.ingredients)}\nTecniche: {', '.join(dish.techniques)}"
             
             node = Node(
@@ -84,8 +95,6 @@ class GalacticMenuParser(PipelineComponent):
             )
             nodes.append(node)
         
-        # 4. Creiamo un Node root che contiene tutti i piatti come children
-        # Questo è compatibile con NodeSplitter che si aspetta un singolo Node
         root_node = Node(
             content=f"Menu del ristorante {restaurant_name}",
             metadata={
@@ -100,64 +109,47 @@ class GalacticMenuParser(PipelineComponent):
         return root_node
 
     def _extract_text_with_llama(self, path: str) -> str:
-        try:
-            # LlamaParse.parse() restituisce un JobResult object
-            result = self.parser.parse(path)
+        """
+        Estrae il testo grezzo da un PDF usando LlamaParse.
+        
+        Args:
+            path: Path del file PDF
             
-            # Accedere direttamente alle pagine
+        Returns:
+            Testo estratto dal PDF, stringa vuota in caso di errore
+        """
+        try:
+            result = self.parser.parse(path)
             pages_with_text = [page for page in result.pages if page.text]
             full_text = "\n".join([page.text for page in pages_with_text])
-            
             return full_text
-            
         except Exception as e:
+            logger.error(f"Errore durante l'estrazione testo con LlamaParse: {e}")
             return ""
 
     def _extract_structured_data(self, text: str) -> dict:
-        prompt = f"""
-        Sei un assistente che estrae dati strutturati da menu di ristoranti galattici.
-        
-        Analizza attentamente il seguente testo e individua per ciascun piatto tutte le informazioni che lo riguardano e riportale ESATTAMENTE come sono scritti:
-        - Nome del piatto
-        - Descrizione
-        - Pianeta
-        - Chef
-        - Licenze dello chef
-        - Ingredienti
-        - Tecniche utilizzate nella preparazione del piatto
-
-        Restituisci un JSON valido con questa struttura ESATTA:
-        {{
-            "restaurant": {{
-                "name": "Nome Ristorante",
-                "planet": "Nome Pianeta",
-                "chef": {{ "name": "Nome Chef", "licenses": ["LTK III", "P V"] }}
-            }},
-            "dishes": [
-                {{
-                    "name": "Nome Piatto",
-                    "description": "Descrizione del piatto",
-                    "ingredients": ["Ingrediente 1", "Ingrediente 2"],
-                    "techniques": ["Tecnica 1", "Tecnica 2"]
-                }}
-            ]
-        }}
-        
-        TESTO MENU:
-        {text}
         """
+        Estrae dati strutturati dal testo del menu usando un LLM.
+        
+        Args:
+            text: Testo grezzo estratto dal PDF
+            
+        Returns:
+            Dizionario con struttura {"restaurant": {...}, "dishes": [...]}
+            Restituisce {"dishes": []} in caso di errore
+        """
+        prompt = EXTRACT_STRUCTURED_DATA_PROMPT(text)
         
         try:
             response = self.client.invoke(prompt)
             content = response.text if hasattr(response, 'text') else str(response)
-            
-            # Pulizia markdown json se presente
             content = content.replace("```json", "").replace("```", "").strip()
             parsed_json = json.loads(content)
-            
             return parsed_json
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
+            logger.error(f"Errore nel parsing JSON dalla risposta LLM: {e}")
             return {"dishes": []}
-        except Exception:
+        except Exception as e:
+            logger.error(f"Errore durante l'estrazione dati strutturati: {e}")
             return {"dishes": []}
 

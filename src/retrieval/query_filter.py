@@ -1,94 +1,116 @@
+"""Modulo per estrarre filtri espliciti dalle query e costruire filtri Qdrant."""
+
+import logging
 import os
 import json
 from typing import Dict, Optional, List, Any
 from datapizza.core.models import PipelineComponent
 from datapizza.clients.openai import OpenAIClient
 from qdrant_client import models
+from src.utils.prompts import EXTRACT_FILTERS_PROMPT, EXTRACT_SEARCH_QUERY_PROMPT
+from src.utils.config import LLM_MODEL, PLANETS
+
+logger = logging.getLogger(__name__)
 
 
 class QueryFilterExtractor(PipelineComponent):
     """
-    Modulo che analizza la query per estrarre filtri espliciti (pianeta, ristorante, ingrediente, tecnica)
-    e costruisce un filtro Qdrant per ottimizzare la ricerca vettoriale.
+    Estrae filtri espliciti dalle query e costruisce filtri Qdrant.
+    
+    Analizza la query per identificare:
+    - Pianeta
+    - Ristorante
+    - Chef
+    - Ingredienti IN (devono essere presenti)
+    - Ingredienti OUT (non devono essere presenti)
+    - Tecniche IN (devono essere presenti)
+    - Tecniche OUT (non devono essere presenti)
+    
+    Supporta filtri negativi per gestire query come:
+    - "piatti senza ingrediente X"
+    - "piatti che non usano tecnica Y"
+    
+    Genera anche una query ottimizzata per la ricerca semantica.
     """
+    
     def __init__(self):
+        """Inizializza il componente con il client LLM."""
         super().__init__()
         self.llm_client = OpenAIClient(
             api_key=os.getenv("OPENAI_API_KEY"),
-            model="gpt-4o-mini"
+            model=LLM_MODEL
         )
 
     def _get_planet_name(self) -> str:
         """
-        Ritorna la lista dei pianeti.
+        Restituisce la lista dei pianeti disponibili come stringa formattata.
+        
+        Returns:
+            Stringa con i pianeti separati da virgola
         """
-        planets = [
-            "Pandora",
-            "Ego",
-            "Cybertron",
-            "Montressor",
-            "Krypton",
-            "Namecc",
-            "Klyntar",
-            "Asgard",
-            "Tatooine",
-            "Arrakis"
-        ]
-        return ", ".join(planets)
+        return ", ".join(PLANETS)
     
     def _run(self, query: str, **kwargs) -> Dict[str, Any]:
         """
         Analizza la query e estrae filtri espliciti.
         
+        Args:
+            query: Query dell'utente
+            **kwargs: Argomenti aggiuntivi per compatibilità
+            
         Returns:
             Dict con:
-            - query_filter: Filtro Qdrant (se presente)
-            - query: Query originale (per passarla al filtro LLM successivo)
-            - search_query: Query ottimizzata per la ricerca semantica (senza testo descrittivo)
+            - query_filter: Filtro Qdrant (se presente, altrimenti None)
+            - query: Query originale
+            - search_query: Query ottimizzata per ricerca semantica
         """
-        # Usa LLM per estrarre filtri espliciti dalla query
+        logger.info(f"[QueryFilterExtractor] Analisi query: '{query}'")
+        
         filters = self._extract_filters(query)
-        print(f"[DEBUG QueryFilterExtractor] Filtri estratti: {filters}")
+        logger.info(f"[QueryFilterExtractor] Filtri estratti:")
+        logger.info(f"  - Planet: {filters.get('planet')}")
+        logger.info(f"  - Restaurant: {filters.get('restaurant_name')}")
+        logger.info(f"  - Chef: {filters.get('chef_name')}")
+        logger.info(f"  - Ingredients IN: {filters.get('ingredients_in')}")
+        logger.info(f"  - Ingredients OUT: {filters.get('ingredients_out')}")
+        logger.info(f"  - Techniques IN: {filters.get('techniques_in')}")
+        logger.info(f"  - Techniques OUT: {filters.get('techniques_out')}")
         
-        # Estrai query ottimizzata per ricerca semantica (solo ingredienti/tecniche chiave)
         search_query = self._extract_search_query(query)
-        print(f"[DEBUG QueryFilterExtractor] Query ricerca semantica: {search_query}")
+        logger.info(f"[QueryFilterExtractor] Query ottimizzata per ricerca semantica: '{search_query}'")
         
-        # Costruisci filtro Qdrant se ci sono filtri espliciti
         qdrant_filter = self._build_qdrant_filter(filters)
-        print(f"[DEBUG QueryFilterExtractor] Filtro Qdrant costruito: {qdrant_filter}")
+        if qdrant_filter:
+            logger.info(f"[QueryFilterExtractor] ✓ Filtro Qdrant costruito con successo")
+            logger.debug(f"[QueryFilterExtractor] Dettagli filtro: must={len(qdrant_filter.must) if hasattr(qdrant_filter, 'must') and qdrant_filter.must else 0}, must_not={len(qdrant_filter.must_not) if hasattr(qdrant_filter, 'must_not') and qdrant_filter.must_not else 0}")
+        else:
+            logger.info(f"[QueryFilterExtractor] Nessun filtro Qdrant costruito (nessun filtro esplicito trovato)")
         
         return {
             "query": query,
-            "search_query": search_query,  # Query ottimizzata per ricerca semantica
+            "search_query": search_query,
             "query_filter": qdrant_filter if qdrant_filter else None
         }
     
     def _extract_filters(self, query: str) -> Dict[str, Optional[str]]:
         """
         Estrae filtri espliciti dalla query usando LLM.
-        NOTA: Estraiamo solo filtri espliciti e precisi (pianeta, ristorante, chef, ingredienti, tecniche).
+        
+        Estrae filtri positivi (IN) e negativi (OUT) per:
+        - Pianeta (se presente nella lista dei pianeti)
+        - Ristorante
+        - Chef
+        - Ingredienti IN/OUT (nomi esatti)
+        - Tecniche IN/OUT (nomi esatti)
+        
+        Args:
+            query: Query dell'utente
+            
+        Returns:
+            Dict con i filtri estratti (None per quelli non trovati)
         """
-        prompt = f"""
-        Analizza la seguente domanda e identifica se contiene filtri espliciti e precisi.
-        Restituisci un JSON con questa struttura:
-        {{
-            "planet": "Nome del pianeta, se menzionato esplicitamente e presente nella lista dei pianeti ({self._get_planet_name()}), altrimenti null",
-            "restaurant_name": "Nome del ristorante, se menzionato esplicitamente, altrimenti null",
-            "chef_name": "Nome dello chef se menzionato esplicitamente, altrimenti null",
-            "ingredients": "Lista degli ingredienti se menzionati esplicitamente (es. ['Ingrediente 1', 'Ingrediente 2']), altrimenti null",
-            "techniques": "Lista delle tecniche se menzionate esplicitamente (es. ['Tecnica 1', 'Tecnica 2']), altrimenti null"
-        }}
-        
-        IMPORTANTE: 
-        - Estrai ingredienti e tecniche SOLO se sono menzionati esplicitamente e precisamente nella domanda.
-        - Per ingredienti: estrai il nome esatto (compreso di caratteri speciali)
-        - Per tecniche: estrai il nome esatto (compreso di caratteri speciali)
-        
-        Domanda: "{query}"
-        
-        Restituisci SOLO il JSON, senza altro testo.
-        """
+        planets_list = self._get_planet_name()
+        prompt = EXTRACT_FILTERS_PROMPT(query, planets_list)
         
         try:
             response = self.llm_client.invoke(prompt)
@@ -96,133 +118,222 @@ class QueryFilterExtractor(PipelineComponent):
             content = content.replace("```json", "").replace("```", "").strip()
             filters = json.loads(content)
             
-            # Normalizza ingredienti e tecniche: assicurati che siano liste o None
-            if "ingredients" in filters:
-                if filters["ingredients"] is None or filters["ingredients"] == "null":
-                    filters["ingredients"] = None
-                elif isinstance(filters["ingredients"], str):
-                    # Se è una stringa, prova a parsarla come JSON
-                    try:
-                        filters["ingredients"] = json.loads(filters["ingredients"])
-                    except:
-                        filters["ingredients"] = [filters["ingredients"]]
-                elif not isinstance(filters["ingredients"], list):
-                    filters["ingredients"] = None
+            # Normalizza ingredients_in
+            for key in ["ingredients_in", "ingredients_out"]:
+                if key in filters:
+                    if filters[key] is None or filters[key] == "null":
+                        filters[key] = None
+                    elif isinstance(filters[key], str):
+                        try:
+                            filters[key] = json.loads(filters[key])
+                        except:
+                            filters[key] = [filters[key]]
+                    elif not isinstance(filters[key], list):
+                        filters[key] = None
             
-            if "techniques" in filters:
-                if filters["techniques"] is None or filters["techniques"] == "null":
-                    filters["techniques"] = None
-                elif isinstance(filters["techniques"], str):
-                    try:
-                        filters["techniques"] = json.loads(filters["techniques"])
-                    except:
-                        filters["techniques"] = [filters["techniques"]]
-                elif not isinstance(filters["techniques"], list):
-                    filters["techniques"] = None
+            # Normalizza techniques_in
+            for key in ["techniques_in", "techniques_out"]:
+                if key in filters:
+                    if filters[key] is None or filters[key] == "null":
+                        filters[key] = None
+                    elif isinstance(filters[key], str):
+                        try:
+                            filters[key] = json.loads(filters[key])
+                        except:
+                            filters[key] = [filters[key]]
+                    elif not isinstance(filters[key], list):
+                        filters[key] = None
+            
+            # Manteniamo compatibilità con vecchio formato per retrocompatibilità
+            # Se ci sono solo ingredients/techniques (vecchio formato), li mettiamo in _in
+            if "ingredients" in filters and "ingredients_in" not in filters:
+                filters["ingredients_in"] = filters.pop("ingredients")
+                filters["ingredients_out"] = None
+            if "techniques" in filters and "techniques_in" not in filters:
+                filters["techniques_in"] = filters.pop("techniques")
+                filters["techniques_out"] = None
             
             return filters
         except Exception as e:
-            print(f"[DEBUG QueryFilterExtractor] Errore nell'estrazione filtri: {e}")
-            return {"planet": None, "restaurant_name": None, "chef_name": None, "ingredients": None, "techniques": None}
+            logger.error(f"Errore nell'estrazione filtri: {e}")
+            return {
+                "planet": None, 
+                "restaurant_name": None, 
+                "chef_name": None, 
+                "ingredients_in": None,
+                "ingredients_out": None,
+                "techniques_in": None,
+                "techniques_out": None
+            }
     
     def _extract_search_query(self, query: str) -> str:
         """
-        Estrae una query ottimizzata per la ricerca semantica, rimuovendo testo descrittivo
-        e mantenendo solo ingredienti, tecniche e informazioni chiave.
-        """
-        prompt = f"""
-        Analizza la seguente domanda e crea una query ottimizzata per la ricerca semantica di piatti.
+        Estrae una query ottimizzata per la ricerca semantica.
         
-        La query deve contenere:
+        Rimuove testo descrittivo e mantiene solo:
         - Nomi di ingredienti menzionati
         - Nomi di tecniche menzionate
-        - Informazioni essenziali (pianeta, ristorante, chef se menzionati)
+        - Informazioni essenziali (pianeta, ristorante, chef)
         
-        IMPORTANTE: Se la domanda chiede ingredienti e/o tecniche specifici, crea una query che includa:
-        - Il nome esatto dell'ingrediente e/o tecnica (compreso anche di caratteri speciali)
-        - La parola "piatto", "ingrediente" e/o "tecnica" per contesto
-        - Esempi: "Piatto con ingrediente X", "Piatto con tecnica Y"
-        
-        Domanda originale: "{query}"
-        
-        Restituisci SOLO la query ottimizzata, senza altro testo o spiegazioni.
+        Args:
+            query: Query originale dell'utente
+            
+        Returns:
+            Query ottimizzata per ricerca semantica
         """
+        prompt = EXTRACT_SEARCH_QUERY_PROMPT(query)
         
         try:
             response = self.llm_client.invoke(prompt)
             content = response.text if hasattr(response, 'text') else str(response)
             content = content.replace("```", "").strip()
-            # Rimuovi eventuali prefissi come "Query:" o "Query ottimizzata:"
             lines = content.split('\n')
             for line in lines:
                 line = line.strip()
                 if line and not line.lower().startswith(('query', 'query ottimizzata', 'risposta')):
                     return line
-            # Fallback: usa la prima riga non vuota
             return next((line.strip() for line in lines if line.strip()), query)
-        except Exception:
-            # Fallback: usa la query originale
+        except Exception as e:
+            logger.warning(f"Errore nell'estrazione query ottimizzata: {e}, uso query originale")
             return query
     
     def _build_qdrant_filter(self, filters: Dict[str, Optional[str]]):
         """
         Costruisce un filtro Qdrant usando gli oggetti models di Qdrant.
-        Qdrant filter syntax: https://qdrant.tech/documentation/concepts/filtering/
-        """
-        conditions = []
-
-        print(f"[DEBUG QueryFilterExtractor] Filtri: {filters}")
         
-        # Filtro per pianeta
+        Crea condizioni positive (must) e negative (must_not) per ogni filtro presente.
+        Riferimento: https://qdrant.tech/documentation/concepts/filtering/
+        
+        Args:
+            filters: Dict con i filtri estratti dalla query
+            
+        Returns:
+            Filtro Qdrant se ci sono condizioni, altrimenti None
+        """
+        must_conditions = []
+        must_not_conditions = []
+
+        logger.debug(f"[QueryFilterExtractor] Costruzione filtro Qdrant da: {filters}")
+        
+        # Filtri positivi (must)
         if filters.get("planet"):
-            conditions.append(
+            logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST: planet={filters['planet']}")
+            must_conditions.append(
                 models.FieldCondition(
                     key="planet",
                     match=models.MatchValue(value=filters["planet"])
                 )
             )
         
-        # Filtro per ristorante
         if filters.get("restaurant_name"):
-            conditions.append(
+            logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST: restaurant_name={filters['restaurant_name']}")
+            must_conditions.append(
                 models.FieldCondition(
                     key="restaurant_name",
                     match=models.MatchValue(value=filters["restaurant_name"])
                 )
             )
 
-        # Filtro per chef
         if filters.get("chef_name"):
-            conditions.append(
+            logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST: chef_name={filters['chef_name']}")
+            must_conditions.append(
                 models.FieldCondition(
                     key="chef_name",
                     match=models.MatchValue(value=filters["chef_name"])
                 )
             )
 
-        # Filtro per ingredienti
-        if filters.get("ingredients"):
-            for _filter in filters["ingredients"]:
-                conditions.append(
+        # Ingredienti IN (devono essere presenti)
+        if filters.get("ingredients_in"):
+            for ingredient in filters["ingredients_in"]:
+                logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST: ingredient IN={ingredient}")
+                must_conditions.append(
                     models.FieldCondition(
                         key="raw_ingredients",
-                        match=models.MatchAny(any=[_filter])
+                        match=models.MatchAny(any=[ingredient])
                     )
                 )
 
-        # Filtro per tecniche
-        if filters.get("techniques"):
-            for _filter in filters["techniques"]:
-                conditions.append(
+        # Tecniche IN (devono essere presenti)
+        if filters.get("techniques_in"):
+            for technique in filters["techniques_in"]:
+                logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST: technique IN={technique}")
+                must_conditions.append(
                     models.FieldCondition(
                         key="raw_techniques",
-                        match=models.MatchAny(any=[_filter])
+                        match=models.MatchAny(any=[technique])
+                    )
+                )
+
+        # Ingredienti OUT (non devono essere presenti)
+        if filters.get("ingredients_out"):
+            for ingredient in filters["ingredients_out"]:
+                logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST_NOT: ingredient OUT={ingredient}")
+                must_not_conditions.append(
+                    models.FieldCondition(
+                        key="raw_ingredients",
+                        match=models.MatchAny(any=[ingredient])
+                    )
+                )
+
+        # Tecniche OUT (non devono essere presenti)
+        if filters.get("techniques_out"):
+            for technique in filters["techniques_out"]:
+                logger.debug(f"[QueryFilterExtractor] Aggiunta condizione MUST_NOT: technique OUT={technique}")
+                must_not_conditions.append(
+                    models.FieldCondition(
+                        key="raw_techniques",
+                        match=models.MatchAny(any=[technique])
                     )
                 )
         
-        if not conditions:
+        # Costruisci il filtro solo se ci sono condizioni
+        if not must_conditions and not must_not_conditions:
+            logger.debug("[QueryFilterExtractor] Nessuna condizione trovata, ritorno None")
             return None
         
-        # Costruisci filtro Qdrant (Must = AND logic)
-        return models.Filter(must=conditions)
+        filter_dict = {}
+        if must_conditions:
+            filter_dict["must"] = must_conditions
+            logger.info(f"[QueryFilterExtractor] Filtro MUST: {len(must_conditions)} condizioni")
+        if must_not_conditions:
+            filter_dict["must_not"] = must_not_conditions
+            logger.info(f"[QueryFilterExtractor] Filtro MUST_NOT: {len(must_not_conditions)} condizioni")
+        
+        qdrant_filter = models.Filter(**filter_dict)
+        
+        # Log dettagliato del filtro completo
+        logger.info("[QueryFilterExtractor] " + "=" * 70)
+        logger.info("[QueryFilterExtractor] FILTRO QDRANT COMPLETO:")
+        logger.info("[QueryFilterExtractor] " + "-" * 70)
+        
+        if must_conditions:
+            logger.info(f"[QueryFilterExtractor] MUST ({len(must_conditions)} condizioni):")
+            for i, condition in enumerate(must_conditions, 1):
+                key = condition.key
+                if hasattr(condition.match, 'value'):
+                    value = condition.match.value
+                    logger.info(f"[QueryFilterExtractor]   {i}. {key} = '{value}'")
+                elif hasattr(condition.match, 'any'):
+                    values = condition.match.any
+                    logger.info(f"[QueryFilterExtractor]   {i}. {key} IN {values}")
+                else:
+                    logger.info(f"[QueryFilterExtractor]   {i}. {key} = {condition.match}")
+        
+        if must_not_conditions:
+            logger.info(f"[QueryFilterExtractor] MUST_NOT ({len(must_not_conditions)} condizioni):")
+            for i, condition in enumerate(must_not_conditions, 1):
+                key = condition.key
+                if hasattr(condition.match, 'value'):
+                    value = condition.match.value
+                    logger.info(f"[QueryFilterExtractor]   {i}. {key} != '{value}'")
+                elif hasattr(condition.match, 'any'):
+                    values = condition.match.any
+                    logger.info(f"[QueryFilterExtractor]   {i}. {key} NOT IN {values}")
+                else:
+                    logger.info(f"[QueryFilterExtractor]   {i}. {key} != {condition.match}")
+        
+        logger.info("[QueryFilterExtractor] " + "=" * 70)
+        
+        return qdrant_filter
 

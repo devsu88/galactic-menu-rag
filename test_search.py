@@ -11,7 +11,7 @@ vector_store = QdrantVectorstore(host="localhost", port=6333)
 collection_name = "galactic_menu"
 
 # Search for similar chunks
-query = "Quali piatti eterei sono preparati usando sia la Cottura Olografica Quantum Fluttuante che la Decostruzione Interdimensionale Lovecraftiana?"
+query = "Quali piatti sono preparati usando la tecnica Surgelamento Antimaterico a Risonanza Inversa senza impiegare Foglie di Mandragora?"
 query_vector = embedder.embed(query)
 results = vector_store.search(
     collection_name=collection_name,
