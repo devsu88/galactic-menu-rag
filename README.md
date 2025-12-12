@@ -52,7 +52,7 @@ galactic-menu-rag/
 
 ## Utilizzo
 
-### Setup Qdrant
+### Qdrant
 ```bash
 docker pull qdrant/qdrant
 ```
@@ -60,6 +60,12 @@ docker pull qdrant/qdrant
 docker run -p 6333:6333 -p 6334:6334 \
     -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
     qdrant/qdrant
+```
+
+### Environment
+```bash
+OPENAI_API_KEY=your-openai-api-key
+LLAMA_CLOUD_API_KEY=your-llama-cloud-api-key
 ```
 
 ### Ingestion
