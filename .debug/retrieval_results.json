@@ -113,9 +113,8 @@
     "question": "Quali piatti prepari utilizzando esclusivamente la Sferificazione Filamentare a Molecole Vibrazionali e evitando completamente l'Amalgamazione Sintetica Molecolare?",
     "found_dishes": [
       "Nebulare Asteroideo con Crepuscolo di Mucca",
-      "Cosmic Harmony Infusion",
-      "Viaggio Cosmico nel Multiverso",
       "Eclissi Quantica: Viaggio nei Reami del Gusto",
+      "Cosmic Harmony Infusion",
       "Panetto di Carne",
       "Pizza Gio 2",
       "Serenata del Multiverso"
@@ -128,8 +127,8 @@
       "Sinfonia Cosmica di Terracotta",
       "Nebulare Asteroideo con Crepuscolo di Mucca",
       "Eclissi Quantica: Viaggio nei Reami del Gusto",
-      "Panetto di Carne",
       "Viaggio Cosmico nel Multiverso",
+      "Panetto di Carne",
       "Cosmic Harmony Infusion",
       "Serenata del Multiverso"
     ]
@@ -139,11 +138,9 @@
     "question": "Quali piatti della nostra collezione sono creati utilizzando la tecnica di Sferificazione con Campi Magnetici Entropici e non contengono Spezie Melange?",
     "found_dishes": [
       "Cosmo Sferico di Sogni Rigenerativi",
-      "Sinfonia Cosmica di Sapore",
       "Sinfonia di Gusti del Multiverso",
       "Universo in Un Boccone",
-      "Portale Interdimensionale di Sapori",
-      "La Balena Sputafuoco"
+      "Portale Interdimensionale di Sapori"
     ]
   },
   {
@@ -160,7 +157,8 @@
     "row_id": 19,
     "question": "Quali piatti leggendari dell'universo utilizzano Foglie di Nebulosa, Amido di Stellarion e Uova di Fenice nella loro preparazione?",
     "found_dishes": [
-      "Galassia di Sapori Sublimi"
+      "Galassia di Sapori Sublimi",
+      "Galassia Suprema"
     ]
   },
   {
@@ -183,9 +181,7 @@
     "row_id": 22,
     "question": "Quali piatti del vostro pianeta utilizzano la Cottura a Vapore con Flusso di Particelle Isoarmoniche, combinando Riso di Cassandra e Foglie di Nebulosa?",
     "found_dishes": [
-      "Galassia di Sapori Eterei",
-      "Sinfonia Galattica",
-      "Sinfonia Celeste dell'Equilibrio Temporale"
+      "Galassia di Sapori Eterei"
     ]
   },
   {
@@ -218,16 +214,17 @@
     "row_id": 27,
     "question": "Quali piatti includono Lattuga Namecciana e Carne di Mucca ma non contengono Teste di Idra?",
     "found_dishes": [
-      "Nebulosa Eterna",
-      "Etereo Crepuscolare"
+      "La Mucca Che Stordisce l'Universo"
     ]
   },
   {
     "row_id": 28,
     "question": "Quali piatti includono Essenza di Tachioni e Carne di Mucca, ma non utilizzano Muffa Lunare?",
     "found_dishes": [
+      "Sinfonia Cosmica all'Alba di Fenice",
       "Galassia Suprema",
-      "Odissea Temporale"
+      "Odissea Temporale",
+      "Sinfonia Temporale al Tocco di Crono"
     ]
   },
   {
@@ -251,21 +248,23 @@
   {
     "row_id": 31,
     "question": "Quali sono i piatti che combinano Funghi dell’Etere e Erba Pipa senza utilizzare la tecnica della Decostruzione Magnetica Risonante nella loro preparazione?",
-    "found_dishes": []
+    "found_dishes": [
+      "Sinfonia Galattica"
+    ]
   },
   {
     "row_id": 32,
     "question": "Quali sono quei piatti che combinano la deliziosa Salsa Szechuan con i mistici Granuli di Nebbia Arcobaleno, evitando però di utilizzare la tecnica di Affumicatura a Stratificazione Quantica?",
     "found_dishes": [
-      "Galassia di Sapori Sublimi",
-      "Sinfonia Cosmica di Mare e Stelle"
+      "Sinfonia Cosmica alla Szechuan",
+      "Nebulae Di-Cedri Risvegliati"
     ]
   },
   {
     "row_id": 33,
     "question": "Quali piatti, preparati senza usare Funghi Orbitali, sfruttano sia l’Affumicatura tramite Big Bang Microcosmico sia l’Affettamento a Pulsazioni Quantistiche?",
     "found_dishes": [
-      "Galassie Riflesse: Sinfonia del Multiverso"
+      "Galassia Riflessa"
     ]
   },
   {
@@ -278,7 +277,7 @@
     "question": "Quali piatti utilizzano la Polvere di Crononite e la tecnica di Incisione Elettromagnetica Plasmica, ma non impiegano la Decostruzione Atomica a Strati Energetici nella loro preparazione?",
     "found_dishes": [
       "Sinfonia Cosmica di Terracotta",
-      "Sinfonia Temporale delle Profondità Infrasoniche",
+      "Il Viaggio Cosmico di Marinetti",
       "Sinfonia del Multiverso Nascente"
     ]
   },
@@ -307,7 +306,10 @@
   {
     "row_id": 39,
     "question": "Quali piatti escludono l'uso di Cristalli di Nebulite e Funghi dell’Etere, ma vengono preparati utilizzando la Marinatura tramite Reazioni d'Antimateria Diluite?",
-    "found_dishes": []
+    "found_dishes": [
+      "Etereo Crepuscolare",
+      "Sinfonia Celestiale di Echi Galattici"
+    ]
   },
   {
     "row_id": 40,
@@ -322,7 +324,10 @@
   {
     "row_id": 41,
     "question": "Quali piatti sono preparati utilizzando la tecnica di Grigliatura Psionica Dinamica Ritmica, escludendo quelli che fanno uso del Pane degli Abissi o della Cottura Olografica Quantum Fluttuante?",
-    "found_dishes": []
+    "found_dishes": [
+      "Risveglio Cosmico: Una Sinfonia di Sapori Universali",
+      "Serenata del Multiverso"
+    ]
   },
   {
     "row_id": 42,
@@ -333,9 +338,8 @@
     "row_id": 43,
     "question": "Quali piatti vengono preparati attraverso la Decostruzione Ancestrale senza l'uso della Cottura a Vapore Termocinetica Multipla o della Marinatura a Infusione Gravitazionale?",
     "found_dishes": [
-      "Galassia Risvegliata",
-      "Universo in Fusilli - Variazione Celestiale",
-      "Ecosistema Celeste"
+      "Galassia d'Aromi Perduti",
+      "Universo in Fusilli - Variazione Celestiale"
     ]
   },
   {
@@ -343,8 +347,10 @@
     "question": "Quali piatti nella galassia sono preparati esclusivamente con la tecnica di Affumicatura Polarizzata a Freddo Iperbarico, evitando del tutto Fermentazione Psionica Energetica e Congelamento Bio-Luminiscente Sincronico?",
     "found_dishes": [
       "Portale Cosmico: Sinfonia di Gnocchi del Crepuscolo con Essenza di Tachioni e Sfumature di Fenice",
+      "Panetto di Carne",
       "Galassie alla Spirale di Vento con Sfera di Ghiaccio Eterno",
-      "Ode al Crepuscolo del Multiverso"
+      "Ode al Crepuscolo del Multiverso",
+      "Galassia Speculare"
     ]
   },
   {
@@ -366,8 +372,7 @@
     "question": "Quali piatti sono preparati utilizzando il Vero Ghiaccio e le tecniche di Cottura Sottovuoto Frugale Energeticamente Negativa e Cottura Sottovuoto Bioma Sintetico?",
     "found_dishes": [
       "Sinfonia del Cosmo Rigenerante",
-      "Cosmic Harmony Infusion",
-      "Cosmos Quantum Fusion"
+      "Galassia nel Piatto: Sinfonia di Sapori e Dimensioni"
     ]
   },
   {
@@ -375,6 +380,506 @@
     "question": "Quali piatti combinano la potenza dello Shard di Materia Oscura con le misteriose Uova di Fenice, utilizzando sia l'Affumicatura Polarizzata a Freddo Iperbarico che la Cottura a Vapore Ecodinamico Bilanciato?",
     "found_dishes": [
       "Portale Cosmico: Sinfonia di Gnocchi del Crepuscolo con Essenza di Tachioni e Sfumature di Fenice"
+    ]
+  },
+  {
+    "row_id": 49,
+    "question": "Quali piatti sono preparati nel ristorante di Asgard utilizzando Essenza di Speziaria?",
+    "found_dishes": [
+      "L'Ascensione Siderale",
+      "Una Mucca e una Balena nella Singolarità"
+    ]
+  },
+  {
+    "row_id": 50,
+    "question": "Quali sono i piatti preparati in un ristorante su Asgard che utilizzano il misterioso Pane di Luce?",
+    "found_dishes": [
+      "Sinfonia Cosmica di Terre e Stelle",
+      "Fenice sull'Orizzonte degli Eventi",
+      "Pane e Carne Rivisitato",
+      "Quadrifonia Cosmica: Sinfonia di Sapori e Dimensioni",
+      "Risotto Interdimensionale alla Carne di Drago e Balena Spaziale con Biscotti della Galassia Croccanti"
+    ]
+  },
+  {
+    "row_id": 51,
+    "question": "Quali piatti deliziosi possiamo gustare su Krypton che sfruttano la rivoluzionaria Cryo-Tessitura Energetica Polarizzata?",
+    "found_dishes": [
+      "Il Viaggio Cosmico di Marinetti",
+      "Sinfonia Galattica Agentica"
+    ]
+  },
+  {
+    "row_id": 52,
+    "question": "Quali sono i piatti preparati su Krypton usando la Cottura Sottovuoto Bioma Sintetico?",
+    "found_dishes": [
+      "Cosmos Culinary Symphony"
+    ]
+  },
+  {
+    "row_id": 53,
+    "question": "Quali piatti del ristorante L'Etere del Gusto sono preparati usando la tecnica Decostruzione Atomica a Strati Energetici?",
+    "found_dishes": [
+      "Sinfonia dell'Universo Morente"
+    ]
+  },
+  {
+    "row_id": 54,
+    "question": "Quali piatti sono preparati al ristorante Stelle dell'Infinito Celestiale usando la tecnica del Congelamento Bio-Luminiscente Sincronico?",
+    "found_dishes": [
+      "Nebulosa di Confini Sfondati",
+      "Galassia Ardente",
+      "Crescendo Cosmico",
+      "Sinfonia Cosmica ma Fatta Bene",
+      "Galassia Riflessa",
+      "Creazione Celestiale: L'Alba del Cosmo",
+      "Galassia di Sogni Cosmogastronomici",
+      "Sinfonia Cosmica del Multiverso"
+    ]
+  },
+  {
+    "row_id": 55,
+    "question": "Quali piatti preparati al ristorante L'Universo in Cucina contengono i pregiati Funghi Orbitali?",
+    "found_dishes": [
+      "Stellar Fusion"
+    ]
+  },
+  {
+    "row_id": 56,
+    "question": "Quali sono i piatti preparati al ristorante L'Oasi delle Dune Stellari che utilizzano la Lattuga Namecciana?",
+    "found_dishes": [
+      "Universo in Fusilli - Variazione Celestiale",
+      "Galassia di Sapore",
+      "Portale del Cosmo: Sinfonia di Sapori Multidimensionali",
+      "Nebulosa di Fenice con Sinfonia Eterea",
+      "La Creazione di Nova",
+      "Nebulosa Celestiale di Sogni Quantici",
+      "Universo Cosmico nel Piatto"
+    ]
+  },
+  {
+    "row_id": 57,
+    "question": "Quali sono i piatti preparati da chef con licenza LTK di grado 7 o superiore che utilizzano le Spezie Melange come ingrediente?",
+    "found_dishes": []
+  },
+  {
+    "row_id": 58,
+    "question": "Quali deliziosi piatti possiamo gustare creati da uno chef con la prestigiosa licenza Q di grado 15 che includono la speziata Nduja Fritta Tanto?",
+    "found_dishes": [
+      "Sinfonia dell'Universo Morente",
+      "Sinfonia Quantistica dell'Universo",
+      "Galassia di Sapore Quantico",
+      "Galassia di Sapori di Aurora",
+      "Nebulosa di Sapori dell'Infinito",
+      "Universo in Un Boccone",
+      "Ecosistema Celeste",
+      "Valzer delle Stelle",
+      "Galassie alla Spirale di Vento con Sfera di Ghiaccio Eterno",
+      "Galassia Incantata: Un Viaggio Attraverso l'Infinito",
+      "Sinfonia del Cosmo e della Leggenda",
+      "Ethereal Temporal Elixir",
+      "Cosmos Quantum Fusion",
+      "Galassie Sospese: Un Viaggio di Sapori Cosmogalattici"
+    ]
+  },
+  {
+    "row_id": 59,
+    "question": "Quali sono i piatti creati da chef con licenza t di grado 2 che utilizzano la Cottura Idrodinamica Autoregolante?",
+    "found_dishes": [
+      "Sinfonia di Stagioni Stellari",
+      "Eterna Sinfonia del Cosmo",
+      "Sinfonia Celestiale di Echi Galattici"
+    ]
+  },
+  {
+    "row_id": 60,
+    "question": "Quali piatti sono stati creati dallo chef con almeno una licenza Luce di grado 3 utilizzando la tecnica della Cottura Sottovuoto Multirealità Collassante?",
+    "found_dishes": [
+      "Universo in Fluttuazione",
+      "Danza Cosmica al Crepuscolo"
+    ]
+  },
+  {
+    "row_id": 61,
+    "question": "Quali piatti preparati al ristorante L'Essenza dell'Infinito utilizzano Fibra di Sintetex o Essenza di Vuoto?",
+    "found_dishes": [
+      "Tris di Verdure con Xenodonte",
+      "Galassia di Sapori: Il Viaggio Senza Tempo",
+      "Sinfonia degli Elementi Eterni",
+      "Sinfonia del Multiverso Nascente",
+      "Sinfonia Celestiale di Echi Galattici",
+      "Galassia Incantata: Un Viaggio Attraverso l'Infinito"
+    ]
+  },
+  {
+    "row_id": 62,
+    "question": "Quali piatti del ristorante Le Dimensioni del Gusto sono preparati con Petali di Eco o Uova di Fenice?",
+    "found_dishes": [
+      "Galassia di Sapori di Aurora",
+      "Evanescenza Cosmica",
+      "Sinfonia Astrale",
+      "Il Simposio degli Infiniti Ricordi 🌈",
+      "Fenice Galattica"
+    ]
+  },
+  {
+    "row_id": 63,
+    "question": "Quali sono i piatti serviti al ristorante L'Universo in Cucina che utilizzano Frammenti di Supernova o la tecnica di Fermentazione Psionica Energetica?",
+    "found_dishes": [
+      "La Creazione di Nova",
+      "Galassia Sublimi: Sinfonia Cosmica in Sei Dimensioni"
+    ]
+  },
+  {
+    "row_id": 64,
+    "question": "Quali piatti del ristorante Cosmica Essenza sono preparati utilizzando i Funghi dell’Etere o la tecnica di Marinatura Temporale Sincronizzata?",
+    "found_dishes": [
+      "Echi del Cosmo",
+      "Nebulosa di Drago Interdimensionale",
+      "Galassie Sospese: Un Viaggio di Sapori Cosmogalattici"
+    ]
+  },
+  {
+    "row_id": 65,
+    "question": "Quali sono i piatti preparati su un ristorante sul pianeta Klyntar che utilizzano Alghe Bioluminescenti o Amido di Stellarion?",
+    "found_dishes": [
+      "Galassia Aurorale",
+      "Galassia di Sapore Interstellare",
+      "Nebulosa di Confini Sfondati",
+      "Valzer delle Stelle"
+    ]
+  },
+  {
+    "row_id": 66,
+    "question": "Quali piatti, serviti su un ristorante su Asgard, includono Essenza di Vuoto o Carne di Xenodonte?",
+    "found_dishes": [
+      "Fenice sull'Orizzonte degli Eventi",
+      "Sinfonia Cosmica di Terre e Stelle",
+      "Sinfonia del Cosmo e della Leggenda",
+      "Più-dimensionale Sinfonia di Sapori: La Carne del Cosmo",
+      "Sinfonia Cosmica di Mare e Stelle",
+      "Nebulosa Eterna"
+    ]
+  },
+  {
+    "row_id": 67,
+    "question": "Quali piatti, serviti su un ristorante su Pandora, sono preparati utilizzando la tecnica del Surgelamento Antimaterico a Risonanza Inversa o la Cottura a Vapore con Flusso di Particelle Isoarmoniche?",
+    "found_dishes": [
+      "Euforia Cosmica"
+    ]
+  },
+  {
+    "row_id": 68,
+    "question": "Quali sono i piatti serviti su Namecc che utilizzano la Grigliatura Plasma Sintetico Risonante o l'Affumicatura Polarizzata a Freddo Iperbarico?",
+    "found_dishes": [
+      "Panetto di Carne",
+      "Portale Cosmico: Sinfonia di Gnocchi del Crepuscolo con Essenza di Tachioni e Sfumature di Fenice",
+      "Più Lontano delle Stelle",
+      "Concordanza Cosmica - Sinfonia di Sapori Multidimensionali"
+    ]
+  },
+  {
+    "row_id": 69,
+    "question": "Quali piatti possono essere trovati, preparati da uno chef con almeno la licenza P di grado 5, che includono Teste di Idra o che sono realizzati utilizzando la tecnica della Bollitura Entropica Sincronizzata?",
+    "found_dishes": [
+      "Piccola Odissea Cosmica",
+      "Porta Celestiale alle Stelle"
+    ]
+  },
+  {
+    "row_id": 70,
+    "question": "Quali piatti sono creati da uno chef con almeno la licenza LTK di grado 6 che utilizza Polvere di Pulsar o la tecnica di Cottura al Forno con Paradosso Temporale Cronospeculare?",
+    "found_dishes": [
+      "Galassie Riflesse: Sinfonia del Multiverso",
+      "Sinfonia Galattica Agentica",
+      "Galassia a Tavola: Sinfonia di Tempeste Cosmiche"
+    ]
+  },
+  {
+    "row_id": 71,
+    "question": "Quali piatti sono stati creati da uno chef con almeno la licenza Q di grado 9, utilizzando la tecnica Affumicatura Psionica Sensoriale oppure la tecnica Cottura Sottovuoto Multirealità Collassante?",
+    "found_dishes": [
+      "Nebolare Asteroideo con Crepuscolo di Mucca"
+    ]
+  },
+  {
+    "row_id": 72,
+    "question": "Quali piatti, preparati da chef con almeno una licenza Mx di grado 1, utilizzano la tecnica della Congelazione Iperdimensionalmente Stratificata o la Cristallizzazione Temporale Reversiva?",
+    "found_dishes": []
+  },
+  {
+    "row_id": 73,
+    "question": "Quali piatti contengono almeno 2 ingredienti tra Spore Quantiche, Latte+ e Radici di Singolarità",
+    "found_dishes": [
+      "Una Mucca e una Balena nella Singolarità",
+      "Fusione Celeste",
+      "Cosmic Harmony Infusion",
+      "Sinfonia Temporale Galattica"
+    ]
+  },
+  {
+    "row_id": 74,
+    "question": "Quali piatti contengono almeno 2 ingredienti tra Ravioli al Vaporeon, Spaghi del Sole e Nettare di Sirena?",
+    "found_dishes": [
+      "Sinfonia Cosmica di Sapore",
+      "La Sinfonia dell'Universo",
+      "Galassia Sensoriale",
+      "Galassie alla Spirale di Vento con Sfera di Ghiaccio Eterno"
+    ]
+  },
+  {
+    "row_id": 75,
+    "question": "Quali piatti contengono almeno 2 ingredienti tra Polvere di Crononite, Nduja Fritta Tanto, Spezie di Melange e Polvere di Stelle?",
+    "found_dishes": [
+      "Ode Cosmica di Terra e Stelle",
+      "Sinfonia Quantistica dell'Universo",
+      "Sinfonia Galattica",
+      "Melodia del Multiverso Parallelo",
+      "Universo in Un Boccone",
+      "Galassia di Sapore Quantico",
+      "Galassia di Sapori Sublimi",
+      "Sinfonia Temporale Galattica",
+      "Sinfonia Temporale nello Spaghi del Sole",
+      "Sinfonia Temporale al Tocco di Crono"
+    ]
+  },
+  {
+    "row_id": 76,
+    "question": "Quali piatti contengono almeno 2 ingredienti tra Carne di Drago, Chocobo Wings, Foglie di Mandragora e Burrobirra?",
+    "found_dishes": [
+      "Odissea Temporale",
+      "Galassia di Sapori: Il Viaggio Senza Tempo",
+      "Portale Interdimensionale di Sapori",
+      "Più Lontano delle Stelle",
+      "Galassie Riflesse: Sinfonia del Multiverso"
+    ]
+  },
+  {
+    "row_id": 77,
+    "question": "Quali piatti includono gli Spaghi del Sole e sono preparati utilizzando almeno una tecnica di Surgelamento del Manuale di Cucina di Sirius Cosmo?",
+    "found_dishes": [
+      "Galassia di Sapori: Sinfonia Transdimensionale",
+      "Cosmos Culinary Symphony",
+      "Galassia Infinita: Viaggio tra Memorie e Stelle"
+    ]
+  },
+  {
+    "row_id": 78,
+    "question": "Quali piatti, realizzati utilizzando almeno una tecnica di taglio descritta nel Manuale di Cucina di Sirius Cosmo, includono i Fusilli del Vento nella preparazione?",
+    "found_dishes": [
+      "Galassie alla Spirale di Vento con Sfera di Ghiaccio Eterno",
+      "Sinfonia Interstellare di Fusilli del Vento con Nettare di Sirena",
+      "Universo in Fusilli - Variazione Celestiale",
+      "Sinfonia di Galassie Riflesse",
+      "Sinfonia Celeste di Granuli Arcobaleno e Riso di Cassandra",
+      "Sinfonia Quantistica dell'Universo",
+      "Evanescenza Cosmica",
+      "Sinfonia Cosmica ma Fatta Bene",
+      "Melodia del Multiverso Parallelo",
+      "Nebulosa Celeste di Terrafirma"
+    ]
+  },
+  {
+    "row_id": 79,
+    "question": "Quali piatti preparati su Asgard richiedono la licenza temporale superiore a 0 e includono Farina di Nettuno?",
+    "found_dishes": [
+      "Portale Cosmico del Kraken",
+      "Una Mucca e una Balena nella Singolarità"
+    ]
+  },
+  {
+    "row_id": 80,
+    "question": "Quali piatti, preparati in un ristorante su Asgard, richiedono la licenza LTK non base e utilizzano Carne di Xenodonte?",
+    "found_dishes": [
+      "Sinfonia Cosmica di Terre e Stelle",
+      "Fenice sull'Orizzonte degli Eventi"
+    ]
+  },
+  {
+    "row_id": 81,
+    "question": "Quali piatti, che necessitano almeno della licenza P di grado 2 per essere preparati, serviti in un ristorante su Pandora, utilizzano Spore Quantiche?",
+    "found_dishes": [
+      "Nebulae Di-Cedri Risvegliati",
+      "Sinfonia Aromatica del Multiverso",
+      "Sinfonia Galattica alla Griglia Cangiante",
+      "Il Risveglio del Drago Celeste",
+      "Pizza Raul"
+    ]
+  },
+  {
+    "row_id": 82,
+    "question": "Quali piatti che necessitano della licenza e+ con un grado minimo di 1 sono serviti su Arrakis e utilizzano l'ingrediente Riso di Cassandra?",
+    "found_dishes": [
+      "Sinfonia di Cristalli e Rigenerazione"
+    ]
+  },
+  {
+    "row_id": 83,
+    "question": "Quali piatti sono preparati utilizzando almeno una tecnica di taglio e una di surgelamento secondo il Manuale di Cucina di Sirius Cosmo, ma senza l'uso di Polvere di Crononite?",
+    "found_dishes": [
+      "Galassia Riflessa",
+      "Cosmic Symphony di Ghiaccio e Fuoco"
+    ]
+  },
+  {
+    "row_id": 84,
+    "question": "Quali piatti sono preparati utilizzando sia tecniche di impasto che di taglio, ma senza l'uso di Shard di Prisma Stellare?",
+    "found_dishes": []
+  },
+  {
+    "row_id": 85,
+    "question": "Quali piatti creati con almeno una tecnica di taglio dal Manuale di Cucina di Sirius Cosmo e che necessitano della licenza t non base per la preparazione, escludendo quelli con Fusilli del Vento, sono serviti?",
+    "found_dishes": [
+      "Sinfonia Cosmica all'Alba di Fenice",
+      "Galassia Suprema",
+      "Sinfonia Celeste di Granuli Arcobaleno e Riso di Cassandra"
+    ]
+  },
+  {
+    "row_id": 86,
+    "question": "Quali piatti possono essere creati utilizzando una tecnica di surgelamento dal nostro fidato di Sirius Cosmo, necessitano di una licenza temporale non base per essere elaborati e non includono le spezie Melange?",
+    "found_dishes": []
+  },
+  {
+    "row_id": 87,
+    "question": "Quali piatti possono essere preparati utilizzando almeno una tecnica di taglio del Manuale di Cucina di Sirius Cosmo e richiedono la licenza G di grado 2 o superiore, escludendo quelli che usano Gnocchi del Crepuscolo?",
+    "found_dishes": [
+      "Sinfonia di Stagioni Stellari",
+      "Galassia di Sapori Interstellari",
+      "Galassia Aurorale"
+    ]
+  },
+  {
+    "row_id": 88,
+    "question": "Quali piatti, preparati utilizzando almeno una tecnica di taglio citata nel Manuale di Cucina di Sirius Cosmo e che richiedono la licenza G di almeno grado 2 per essere cucinati, non utilizzano la Farina di Nettuno?",
+    "found_dishes": [
+      "Sinfonia Quantistica delle Stelle",
+      "Sinfonia Quantica Galattica"
+    ]
+  },
+  {
+    "row_id": 89,
+    "question": "Quali sono i piatti che necessitano di una licenza di grado 3 o superiore per la preparazione e sono serviti in un ristorante che si trova entro un raggio di 659 anni luce dal pianeta Namecc, Namecc incluso?",
+    "found_dishes": [
+      "Fenice Galattica",
+      "Rapsodia Quantistica nel Cosmo",
+      "Galassia di Sapore Quantum",
+      "Tris di Carne con Pane",
+      "Panetto di Carne"
+    ]
+  },
+  {
+    "row_id": 90,
+    "question": "Quali sono i piatti che necessitano almeno della licenza Psionica di grado 4 e che sono stati preparati in ristoranti entro un raggio di 176 anni luce dal pianeta Arrakis, Arrakis incluso?",
+    "found_dishes": [
+      "Sinfonia di Multiverso: La Danza degli Elementi",
+      "Sinfonia Galattica",
+      "Sinfonia del Multiverso",
+      "Sinfonia Cosmica di Terre e Stelle",
+      "Sfere del Ricordo Astrale"
+    ]
+  },
+  {
+    "row_id": 91,
+    "question": "Quali piatti sono stati creati utilizzando almeno una tecnica di surgelamento secondo il Manuale di Cucina di Sirius Cosmo e sono stati serviti in un ristorante situato entro un raggio di 317 anni luce dal pianeta Krypton, Krypton incluso?",
+    "found_dishes": [
+      "Sinfonia Galattica Agentica",
+      "Cosmos Quantum Fusion",
+      "Cosmic Harmony Infusion",
+      "Viaggio Galattico: Sinfonia dei Sensi"
+    ]
+  },
+  {
+    "row_id": 92,
+    "question": "Quali piatti speciali sono stati creati utilizzando le tecniche di impasto del Manuale di Cucina di Sirius Cosmo e sono serviti nei ristoranti vicini al pianeta Krypton, entro un raggio di 21 anni luce, Krypton incluso?",
+    "found_dishes": [
+      "Cosmic Harmony Infusion",
+      "Cosmopastico di Meraviglie Celesti",
+      "Galassia di Sapori Interstellari",
+      "Odissea Celestiale",
+      "Cosmic Synchrony: Il Destino di Pulsar"
+    ]
+  },
+  {
+    "row_id": 93,
+    "question": "Quali sono i piatti disponibili nei ristoranti entro 126 anni luce da Cybertron, quest'ultimo incluso, che non includono Funghi dell'Etere?",
+    "found_dishes": [
+      "Sinfonia di Crepuscolo Celestiale",
+      "Sinfonia Temporale nello Spaghi del Sole",
+      "Sinfonia Temporale Galattica",
+      "Sinfonia Temporale al Tocco di Crono",
+      "Sinfonia di Stagioni Stellari",
+      "Galassia Risvegliata",
+      "Cosmopolis delle Galassie Perdute",
+      "Sfogliare Galattico di Sogni Temporali",
+      "Viaggio dei Sensi: Bolla Temporale di Aromi Ancestrali"
+    ]
+  },
+  {
+    "row_id": 94,
+    "question": "Quali piatti possiamo gustare in un ristorante entro 83 anni luce da Cybertron, quest'ultimo incluso, evitando rigorosamente quelli cucinati con Farina di Nettuno?",
+    "found_dishes": []
+  },
+  {
+    "row_id": 95,
+    "question": "Quali piatti posso mangiare se faccio parte dell'Ordine degli Armonisti?",
+    "found_dishes": [
+      "Sinfonia Cosmica di Armonie Terrestri e Celesti",
+      "Sinfonia Cosmica in Otto Movimenti",
+      "Sinfonia Cosmica: Versione Data",
+      "Sinfonia Cosmologica",
+      "Sinfonia Cosmica di Sapore",
+      "Sinfonia Cosmica: Versione Pizza",
+      "Sinfonia Cosmica di Luminiscenze e Contrasti",
+      "Galassia di Sapore Interstellare",
+      "Sinfonia Cosmica: Il Crescendo delle Stelle"
+    ]
+  },
+  {
+    "row_id": 96,
+    "question": "Quali piatti posso mangiare se faccio parte dell'Ordine della Galassia di Andromeda?",
+    "found_dishes": []
+  },
+  {
+    "row_id": 97,
+    "question": "Che piatti posso mangiare che contegnano Essenza di Tachioni, sia stata usata la Cottura a Vapore Ecodinamico Bilanciato nella preparazione ma anche che ogni singolo ingrediente non superi le quantità legali prescritte dal Codice di Galattico?",
+    "found_dishes": [
+      "Sinfonia Temporale al Tocco di Crono",
+      "Portale Cosmico: Sinfonia di Gnocchi del Crepuscolo con Essenza di Tachioni e Sfumature di Fenice",
+      "Sinfonia Cosmica all'Alba di Fenice",
+      "Sinfonia di Cristalli e Rigenerazione",
+      "Il Risveglio del Drago Celeste"
+    ]
+  },
+  {
+    "row_id": 98,
+    "question": "Che piatti che contengono sia Petali di Eco che Foglie di Mandragora posso mangiare se voglio che nessun ingrediente superi le quantità legali prescritte dal Codice di Galattico?",
+    "found_dishes": [
+      "Sinfonia Cosmica di Andromeda",
+      "Sinfonia di Galassie Riflesse",
+      "Cosmic Harmony",
+      "La Balena incontra la Mandragora",
+      "Nebulosa di Confini Sfondati"
+    ]
+  },
+  {
+    "row_id": 99,
+    "question": "Che piatti posso mangiare che contengano i Fusilli del Vento ma che abbia nella sua preparazione la Marinatura a Infusione Gravitazionale correttamente operata da un chef che ha le corrette licenze e certificazioni descritte dal Codice di Galattico?",
+    "found_dishes": [
+      "Sinfonia Galattica alla Griglia Cangiante",
+      "Antipasto Celestiale",
+      "Sinfonia del Multiverso"
+    ]
+  },
+  {
+    "row_id": 100,
+    "question": "Che piatti posso mangiare che contengano Teste di Idra ma che abbia nella sua preparazione la Marinatura a Infusione Gravitazionale correttamente operata da un chef che ha le corrette licenze e certificazioni descritte dal Codice di Galattico?",
+    "found_dishes": [
+      "Sinfonia Galattica di Sapori con Sorpresa di Drago",
+      "Sinfonia Galattica Agentica",
+      "Sinfonia Galattica alla Griglia Cangiante",
+      "Galassie Commoventi di Stellari",
+      "Galassia di Sapori Sublimi"
     ]
   }
 ]
