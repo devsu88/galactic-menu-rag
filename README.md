@@ -14,12 +14,13 @@ galactic-menu-rag/
 │   ├── retrieval/              # Pipeline di retrieval
 │   │   ├── pipeline.py         # Orchestrazione retrieval
 │   │   ├── engines.py          # RetrievalPipeline con DagPipeline
-│   │   ├── query_filter.py     # Estrazione filtri metadati (Qdrant)
+│   │   ├── query_filter.py     # Estrazione filtri metadati (Qdrant) con supporto IN/OUT
 │   │   └── filter.py           # Filtro LLM finale
 │   ├── models/
 │   │   └── dish.py             # Modello dati Dish
 │   └── utils/
-│       └── config.py            # Configurazioni globali
+│       ├── config.py            # Configurazioni globali e setup logging
+│       └── prompts.py           # Prompt templates centralizzati per LLM
 ├── Dataset/
 │   ├── knowledge_base/         # Base di conoscenza
 │   │   ├── menu/               # Menu PDF dei ristoranti
@@ -28,7 +29,9 @@ galactic-menu-rag/
 │   │   └── misc/               # Manuale cucina, distanze CSV
 │   ├── domande.csv             # Domande di test
 │   └── ground_truth/           # Ground truth e mapping
-└── qdrant_storage/             # Storage locale Qdrant
+├── qdrant_storage/             # Storage locale Qdrant
+├── .debug/                     # File JSON di debug intermedi
+└── .output/                    # Risultati CSV di output
 ```
 
 ## Componenti Principali
@@ -40,11 +43,12 @@ galactic-menu-rag/
 - **Qdrant Vectorstore**: Memorizza i chunk con metadati (piatto, ristorante, pianeta, chef, ingredienti, tecniche)
 
 ### Retrieval Pipeline
-- **QueryFilterExtractor**: Estrae filtri espliciti (pianeta, ristorante, chef, ingredienti, tecniche) e ottimizza la query per ricerca semantica
+- **QueryFilterExtractor**: Estrae filtri espliciti (pianeta, ristorante, chef, ingredienti, tecniche) con supporto per filtri positivi (IN) e negativi (OUT). Ottimizza la query per ricerca semantica
 - **Hybrid Search**: 
-  1. Ricerca con filtri metadati Qdrant (precisa)
+  1. Ricerca con filtri metadati Qdrant (precisa, supporta MUST e MUST_NOT)
   2. Fallback a ricerca solo semantica se nessun risultato (robusta a typo)
 - **DishFilter**: Filtro LLM finale per verifica rigorosa dei candidati
+- **Logging**: Sistema di logging dettagliato per tracciare l'intero processo di retrieval
 
 ## Utilizzo
 
