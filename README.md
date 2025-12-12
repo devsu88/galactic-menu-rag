@@ -97,3 +97,4 @@ uv run -m src.main retrieve --questions_file Dataset/domande.csv --output_file r
 
 - **Risultati**: CSV con `row_id` e `result` (comma-separated dish IDs)
 - **Debug**: File JSON intermedi salvati in `.debug/`
+- **File submission**: File JSON `.output/risultati.csv`
